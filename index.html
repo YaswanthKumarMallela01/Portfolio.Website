@@ -1,447 +1,913 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Yaswanth Kumar Mallela – Data Science & Computer Science Student at LPU. Portfolio showcasing AI/ML projects, skills, and experience." />
-  <title>Yaswanth Kumar Mallela | Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Yaswanth Kumar Mallela – Data Science & Computer Science Student at LPU. Portfolio showcasing AI/ML projects, skills, and experience." />
+    <title>Yaswanth Kumar Mallela | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
-  <!-- ========== CURSOR ========== -->
-  <div class="cursor-dot" id="cursorDot"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
+    <!-- ========== CURSOR ========== -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
 
-  <!-- ========== NAVBAR ========== -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#home" class="nav-logo">YK<span class="accent">.</span></a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home" class="nav-link active">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">YK<span class="accent">.</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
 
-  <!-- ========== HERO ========== -->
-  <section class="hero" id="home">
-    <div class="hero-bg">
-      <div class="hero-orb orb1"></div>
-      <div class="hero-orb orb2"></div>
-      <div class="hero-orb orb3"></div>
-      <canvas class="hero-particles" id="particleCanvas"></canvas>
-    </div>
-    <div class="hero-content">
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        Open to Opportunities
-      </div>
-      <h1 class="hero-name">
-        <span class="hero-greeting">Hi, I'm</span>
-        <br />
-        <span class="name-line">Yaswanth Kumar</span>
-        <span class="name-line accent-gradient">Mallela</span>
-      </h1>
-      <p class="hero-tagline">
-        <span id="typingText"></span><span class="cursor-blink">|</span>
-      </p>
-      <p class="hero-sub">
-        3rd Year CSE Student · Data Science · LPU · Building intelligent systems that matter
-      </p>
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">
-          <i class="fas fa-code"></i> View Projects
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="hero-orb orb1"></div>
+            <div class="hero-orb orb2"></div>
+            <div class="hero-orb orb3"></div>
+            <canvas class="hero-particles" id="particleCanvas"></canvas>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Open to Opportunities
+            </div>
+            <h1 class="hero-name">
+                <span class="hero-greeting">Hi, I'm</span>
+                <br />
+                <span class="name-line">Yaswanth Kumar</span>
+                <span class="name-line accent-gradient">Mallela</span>
+            </h1>
+            <p class="hero-tagline">
+                <span id="typingText"></span><span class="cursor-blink">|</span>
+            </p>
+            <p class="hero-sub">
+                3rd Year CSE Student · Data Science · LPU · Building intelligent systems that matter
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-code"></i> View Projects
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <i class="fas fa-paper-plane"></i> Get In Touch
+                </a>
+            </div>
+            <div class="hero-socials">
+                <a href="https://www.linkedin.com/in/yaswanthkumar1/" target="_blank" rel="noopener" class="social-icon"
+                    aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/YaswanthKumarMallela01" target="_blank" rel="noopener" class="social-icon"
+                    aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:yashwanthkumarmallela@gmail.com" class="social-icon" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+        <div class="hero-image-wrap">
+            <div class="hero-ring ring1"></div>
+            <div class="hero-ring ring2"></div>
+            <div class="hero-ring ring3"></div>
+            <img src="Information/Profile Photo.jpg" alt="Yaswanth Kumar Mallela" class="hero-photo" id="heroPhoto" />
+            <div class="hero-photo-glow"></div>
+        </div>
+        <a href="#about" class="scroll-down" aria-label="Scroll down">
+            <i class="fas fa-chevron-down"></i>
         </a>
-        <a href="#contact" class="btn btn-outline">
-          <i class="fas fa-paper-plane"></i> Get In Touch
-        </a>
-      </div>
-      <div class="hero-socials">
-        <a href="https://www.linkedin.com/in/yaswanthkumar1/" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a href="https://github.com/YaswanthKumarMallela01" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="mailto:yashwanthkumarmallela@gmail.com" class="social-icon" aria-label="Email">
-          <i class="fas fa-envelope"></i>
-        </a>
-      </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">Turning Data into <span class="accent-gradient">Insights</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text" data-aos="fade-right">
+                    <p>
+                        I'm <strong>Yaswanth Kumar Mallela</strong>, a 3rd-year Computer Science &amp; Engineering
+                        student specialising in <strong>Data Science</strong> at <strong>Lovely Professional
+                            University</strong>. I'm deeply passionate about building AI-powered applications that solve
+                        real-world problems — from clinical prediction systems to autonomous code generation.
+                    </p>
+                    <p>
+                        My work sits at the intersection of <em>machine learning</em>, <em>deep learning</em>, and
+                        <em>full-stack deployment</em>. Whether it's training a ConvLSTM autoencoder for surveillance
+                        anomaly detection or orchestrating a Gemini-powered code synthesis engine, I care about
+                        end-to-end delivery — models that actually work in production.
+                    </p>
+                    <p>
+                        I'm currently seeking internship and project collaboration opportunities where I can contribute
+                        to impactful AI/ML initiatives, sharpen my skills, and grow alongside a driven team.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-card">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <strong>B.Tech CSE (Data Science)</strong>
+                                <span>Lovely Professional University</span>
+                            </div>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Location</strong>
+                                <span>Punjab, India</span>
+                            </div>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone</strong>
+                                <span><a href="tel:+917013374194">+91 70133 74194</a></span>
+                            </div>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <strong>Status</strong>
+                                <span class="status-open">Open to Internships</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="Information/CVF.pdf" download class="btn btn-primary mt-2">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
+                <div class="about-stats" data-aos="fade-left">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+                        <div class="stat-number" data-target="4">0</div>
+                        <div class="stat-label">Projects Built</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-code-branch"></i></div>
+                        <div class="stat-number" data-target="3">0</div>
+                        <div class="stat-label">Live Deployments</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-brain"></i></div>
+                        <div class="stat-number" data-target="8">0</div>
+                        <div class="stat-label">Technologies</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-star"></i></div>
+                        <div class="stat-number" data-target="3">0</div>
+                        <div class="stat-label">Years of Coding</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section class="skills section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Skills</span>
+                <h2 class="section-title">My <span class="accent-gradient">Tech Stack</span></h2>
+            </div>
+            <div class="skills-categories">
+                <div class="skill-category" data-aos="fade-up">
+                    <h3 class="skill-cat-title"><i class="fas fa-brain"></i> AI &amp; Machine Learning</h3>
+                    <div class="skill-pills">
+                        <span class="skill-pill">Python</span>
+                        <span class="skill-pill">scikit-learn</span>
+                        <span class="skill-pill">TensorFlow / Keras</span>
+                        <span class="skill-pill">PyTorch</span>
+                        <span class="skill-pill">OpenCV</span>
+                        <span class="skill-pill">YOLO</span>
+                        <span class="skill-pill">Gemini API</span>
+                        <span class="skill-pill">LLMs / Prompt Engineering</span>
+                        <span class="skill-pill">ConvLSTM</span>
+                        <span class="skill-pill">Random Forest</span>
+                    </div>
+                </div>
+                <div class="skill-category" data-aos="fade-up" data-delay="100">
+                    <h3 class="skill-cat-title"><i class="fas fa-globe"></i> Web Development</h3>
+                    <div class="skill-pills">
+                        <span class="skill-pill">Flask</span>
+                        <span class="skill-pill">HTML5</span>
+                        <span class="skill-pill">CSS3</span>
+                        <span class="skill-pill">JavaScript</span>
+                        <span class="skill-pill">PHP</span>
+                        <span class="skill-pill">MySQL</span>
+                    </div>
+                </div>
+                <div class="skill-category" data-aos="fade-up" data-delay="200">
+                    <h3 class="skill-cat-title"><i class="fas fa-cloud"></i> DevOps &amp; Tools</h3>
+                    <div class="skill-pills">
+                        <span class="skill-pill">AWS (EC2 / S3)</span>
+                        <span class="skill-pill">Git &amp; GitHub</span>
+                        <span class="skill-pill">Docker</span>
+                        <span class="skill-pill">Render</span>
+                        <span class="skill-pill">XAMPP</span>
+                        <span class="skill-pill">Jupyter Notebook</span>
+                        <span class="skill-pill">VS Code</span>
+                    </div>
+                </div>
+                <div class="skill-category" data-aos="fade-up" data-delay="300">
+                    <h3 class="skill-cat-title"><i class="fas fa-chart-bar"></i> Data Science</h3>
+                    <div class="skill-pills">
+                        <span class="skill-pill">Pandas</span>
+                        <span class="skill-pill">NumPy</span>
+                        <span class="skill-pill">Matplotlib</span>
+                        <span class="skill-pill">Seaborn</span>
+                        <span class="skill-pill">Data Preprocessing</span>
+                        <span class="skill-pill">Feature Engineering</span>
+                        <span class="skill-pill">Model Evaluation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== INTENT BLOCK ========== -->
+    <section class="intent-block" id="intent">
+        <div class="container">
+            <div class="intent-inner" data-aos="fade-up">
+                <div class="intent-icon-wrap">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <div class="intent-text">
+                    <h3>What I'm Looking For</h3>
+                    <p>
+                        Actively seeking <strong>ML / Backend internships</strong> where I can work on
+                        <strong>production systems</strong>, <strong>model optimisation</strong>, and
+                        <strong>end-to-end deployment</strong>. I thrive in environments that value clean
+                        engineering, measurable impact, and iterative experimentation.
+                    </p>
+                </div>
+                <a href="#contact" class="btn btn-primary intent-cta">
+                    <i class="fas fa-handshake"></i> Let's Work Together
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section class="projects section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Projects</span>
+                <h2 class="section-title">Things I've <span class="accent-gradient">Built</span></h2>
+            </div>
+            <div class="projects-grid">
+
+                <!-- ── Liver Cirrhosis ── -->
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-card-header">
+                        <div class="project-icon"><i class="fas fa-heartbeat"></i></div>
+                        <div class="project-badges">
+                            <span class="badge badge-live">🟢 Live</span>
+                            <span class="badge badge-ml">ML</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Liver Cirrhosis Prediction System</h3>
+                    <p class="project-desc">
+                        A Flask-powered web application that predicts liver cirrhosis likelihood from 19 medical
+                        parameters using a Random Forest Classifier. Provides real-time predictions, confidence scores,
+                        and personalised health tips.
+                    </p>
+                    <!-- Quantified outcomes -->
+                    <div class="project-metrics">
+                        <div class="metric"><span class="metric-value">87%</span><span class="metric-label">Model
+                                Accuracy</span></div>
+                        <div class="metric"><span class="metric-value">19</span><span class="metric-label">Clinical
+                                Features</span></div>
+                        <div class="metric"><span class="metric-value">&lt;200ms</span><span
+                                class="metric-label">Response Time</span></div>
+                    </div>
+                    <div class="project-tech">
+                        <span>Python</span><span>Flask</span><span>scikit-learn</span><span>Random
+                            Forest</span><span>Render</span>
+                    </div>
+                    <div class="project-links">
+                        <button class="proj-link proj-link-case" onclick="openModal('liverModal')"
+                            aria-label="View Liver Cirrhosis case study">
+                            <i class="fas fa-book-open"></i> Case Study
+                        </button>
+                        <a href="https://yashs-liver-cirrhosis-prediction-system-uvwq.onrender.com" target="_blank"
+                            rel="noopener" class="proj-link proj-link-live">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <a href="https://github.com/YaswanthKumarMallela01/Liver-Cirrhosis-Prediction-System"
+                            target="_blank" rel="noopener" class="proj-link proj-link-gh">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ── AI Certificate Hub ── -->
+                <div class="project-card" data-aos="fade-up" style="animation-delay:0.1s">
+                    <div class="project-card-header">
+                        <div class="project-icon"><i class="fas fa-certificate"></i></div>
+                        <div class="project-badges">
+                            <span class="badge badge-live">🟢 Live</span>
+                            <span class="badge badge-ai">AI</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">AI Certificate Management Hub</h3>
+                    <p class="project-desc">
+                        A secure, web-based platform to upload, organise, and manage student certificates with OTP
+                        authentication. Built with PHP &amp; MySQL, featuring an admin dashboard and an upcoming AI
+                        Career Assistant chatbot.
+                    </p>
+                    <div class="project-metrics">
+                        <div class="metric"><span class="metric-value">60%</span><span class="metric-label">Faster
+                                Verification</span></div>
+                        <div class="metric"><span class="metric-value">3</span><span class="metric-label">File
+                                Formats</span></div>
+                        <div class="metric"><span class="metric-value">OTP</span><span class="metric-label">Auth
+                                Security</span></div>
+                    </div>
+                    <div class="project-tech">
+                        <span>PHP</span><span>MySQL</span><span>HTML/CSS/JS</span><span>OTP Auth</span><span>Prompt
+                            Engineering</span>
+                    </div>
+                    <div class="project-links">
+                        <button class="proj-link proj-link-case" onclick="openModal('certModal')"
+                            aria-label="View AI Certificate Hub case study">
+                            <i class="fas fa-book-open"></i> Case Study
+                        </button>
+                        <a href="https://yaswanthaicertificatemanagementhub.free.nf/" target="_blank" rel="noopener"
+                            class="proj-link proj-link-live">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <a href="https://github.com/YaswanthKumarMallela01/AI-Certificate-Management-Hub"
+                            target="_blank" rel="noopener" class="proj-link proj-link-gh">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ── LLM Code Engine ── -->
+                <div class="project-card" data-aos="fade-up" style="animation-delay:0.2s">
+                    <div class="project-card-header">
+                        <div class="project-icon"><i class="fas fa-robot"></i></div>
+                        <div class="project-badges">
+                            <span class="badge badge-ai">AI</span>
+                            <span class="badge badge-ml">LLM</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">LLM-Based Code Synthesis Engine</h3>
+                    <p class="project-desc">
+                        An automated Python system that generates fully executable code from JSON problem definitions
+                        via the Gemini API. Runs silently in background with strict policy-based prompt enforcement —
+                        zero user interaction needed.
+                    </p>
+                    <div class="project-metrics">
+                        <div class="metric"><span class="metric-value">0</span><span class="metric-label">Manual
+                                Steps</span></div>
+                        <div class="metric"><span class="metric-value">100%</span><span
+                                class="metric-label">Auto-Generated</span></div>
+                        <div class="metric"><span class="metric-value">1-click</span><span
+                                class="metric-label">Trigger</span></div>
+                    </div>
+                    <div class="project-tech">
+                        <span>Python</span><span>Gemini
+                            API</span><span>JSON</span><span>Automation</span><span>LLM</span>
+                    </div>
+                    <div class="project-links">
+                        <button class="proj-link proj-link-case" onclick="openModal('llmModal')"
+                            aria-label="View LLM Code Engine case study">
+                            <i class="fas fa-book-open"></i> Case Study
+                        </button>
+                        <a href="https://github.com/YaswanthKumarMallela01/LLM-Based-Code-Synthesis-Engine"
+                            target="_blank" rel="noopener" class="proj-link proj-link-gh">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ── Abnormal Event Detector (Freelance) ── -->
+                <div class="project-card featured-card" data-aos="fade-up" style="animation-delay:0.3s">
+                    <div class="project-card-header">
+                        <div class="project-icon"><i class="fas fa-video"></i></div>
+                        <div class="project-badges">
+                            <span class="badge badge-live">🟢 Live</span>
+                            <span class="badge badge-freelance">Freelance</span>
+                            <span class="badge badge-dl">Deep Learning</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Abnormal Event Detection in Surveillance</h3>
+                    <p class="project-desc">
+                        Intelligent surveillance pipeline using a ConvLSTM autoencoder to detect anomalies in video
+                        streams. Supports video upload, live camera feed, and an IP-camera middleware API. Built as a
+                        freelance project and deployed to production.
+                    </p>
+                    <div class="project-metrics">
+                        <div class="metric"><span class="metric-value">20 FPS</span><span class="metric-label">Live
+                                Stream</span></div>
+                        <div class="metric"><span class="metric-value">224px</span><span class="metric-label">Frame
+                                Size</span></div>
+                        <div class="metric"><span class="metric-value">ConvLSTM</span><span
+                                class="metric-label">Architecture</span></div>
+                    </div>
+                    <div class="project-tech">
+                        <span>PyTorch</span><span>ConvLSTM</span><span>OpenCV</span><span>YOLO</span><span>Flask</span><span>Render</span>
+                    </div>
+                    <div class="project-links">
+                        <button class="proj-link proj-link-case" onclick="openModal('survModal')"
+                            aria-label="View surveillance case study">
+                            <i class="fas fa-book-open"></i> Case Study
+                        </button>
+                        <a href="https://abnormal-event-detector.onrender.com/" target="_blank" rel="noopener"
+                            class="proj-link proj-link-live">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div>
+                    <div class="featured-label">⭐ Freelance</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Contact</span>
+                <h2 class="section-title">Let's <span class="accent-gradient">Connect</span></h2>
+                <p class="section-sub">I'm open to internship roles, collaborations, and interesting conversations. Drop
+                    me a message!</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-card">
+                        <a href="mailto:yashwanthkumarmallela@gmail.com" class="contact-item">
+                            <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <strong>Email</strong>
+                                <span>yashwanthkumarmallela@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="tel:+917013374194" class="contact-item">
+                            <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <strong>Phone</strong>
+                                <span>+91 70133 74194</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/yaswanthkumar1/" target="_blank" rel="noopener"
+                            class="contact-item">
+                            <div class="contact-item-icon"><i class="fab fa-linkedin-in"></i></div>
+                            <div>
+                                <strong>LinkedIn</strong>
+                                <span>yaswanthkumar1</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/YaswanthKumarMallela01" target="_blank" rel="noopener"
+                            class="contact-item">
+                            <div class="contact-item-icon"><i class="fab fa-github"></i></div>
+                            <div>
+                                <strong>GitHub</strong>
+                                <span>YaswanthKumarMallela01</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm" data-aos="fade-left"
+                    action="mailto:yashwanthkumarmallela@gmail.com" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="Name" placeholder="John Doe" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="Email" placeholder="john@example.com" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="Subject"
+                            placeholder="Internship Opportunity / Collaboration" />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="Message" rows="5" placeholder="Tell me about the opportunity..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-full" id="sendBtn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="nav-logo">YK<span class="accent">.</span></span>
+                    <p>Building the future, one model at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://www.linkedin.com/in/yaswanthkumar1/" target="_blank" rel="noopener"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/YaswanthKumarMallela01" target="_blank" rel="noopener"
+                        aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:yashwanthkumarmallela@gmail.com" aria-label="Email"><i
+                            class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Yaswanth Kumar Mallela · Crafted with <span style="color:#e84393">❤</span> · Hosted on AWS</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+       CASE STUDY MODALS
+       ============================================================ -->
+
+    <!-- ── MODAL BACKDROP ── -->
+    <div class="modal-backdrop" id="modalBackdrop" onclick="closeActiveModal()"></div>
+
+    <!-- ── LIVER CIRRHOSIS MODAL ── -->
+    <div class="modal" id="liverModal" role="dialog" aria-modal="true" aria-labelledby="liverModalTitle">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeActiveModal()" aria-label="Close">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon"><i class="fas fa-heartbeat"></i></div>
+                <div>
+                    <span class="modal-tag">Case Study · ML · Healthcare</span>
+                    <h2 id="liverModalTitle">Liver Cirrhosis Prediction System</h2>
+                </div>
+            </div>
+
+            <!-- Outcomes banner -->
+            <div class="modal-outcomes">
+                <div class="outcome"><span class="outcome-val">87%</span><span class="outcome-lbl">Accuracy</span></div>
+                <div class="outcome"><span class="outcome-val">19</span><span class="outcome-lbl">Clinical
+                        Features</span></div>
+                <div class="outcome"><span class="outcome-val">&lt;200ms</span><span class="outcome-lbl">Inference
+                        Time</span></div>
+            </div>
+
+            <!-- Architecture diagram -->
+            <div class="modal-section">
+                <h3><i class="fas fa-sitemap"></i> Architecture</h3>
+                <div class="modal-diagram">
+                    <img src="assets/liver_arch.png" alt="Liver Cirrhosis system architecture diagram" loading="lazy" />
+                </div>
+            </div>
+
+            <!-- Data flow -->
+            <div class="modal-section">
+                <h3><i class="fas fa-exchange-alt"></i> Data Flow</h3>
+                <ol class="modal-steps">
+                    <li>User fills a 19-field HTML form (age, gender, lab values, lifestyle factors)</li>
+                    <li>Flask API receives the POST request and validates inputs</li>
+                    <li>A pre-fitted <code>sklearn Normalizer</code> scales all numerical features</li>
+                    <li><code>RandomForestClassifier</code> runs inference and returns class + probability</li>
+                    <li>Response includes prediction label, confidence %, and a contextual health tip</li>
+                </ol>
+            </div>
+
+            <!-- Model rationale -->
+            <div class="modal-section">
+                <h3><i class="fas fa-flask"></i> Model Choice Rationale</h3>
+                <p>Random Forest was selected over logistic regression and SVM because:</p>
+                <ul class="modal-list">
+                    <li>Handles mixed feature types (binary flags + continuous lab values) without separate
+                        preprocessing</li>
+                    <li>Naturally robust to outliers in medical data (e.g. extreme bilirubin values)</li>
+                    <li>Feature importance scores give clinically interpretable insights</li>
+                    <li>Achieves strong performance without hyperparameter sensitivity of gradient boosting</li>
+                </ul>
+            </div>
+
+            <!-- Key trade-offs -->
+            <div class="modal-section">
+                <h3><i class="fas fa-balance-scale"></i> Key Trade-offs</h3>
+                <div class="tradeoffs-grid">
+                    <div class="tradeoff-card tradeoff-pro">
+                        <strong>✅ Chose</strong>
+                        <p>Random Forest — high accuracy, interpretable, no GPU needed, fast to serve</p>
+                    </div>
+                    <div class="tradeoff-card tradeoff-con">
+                        <strong>⚖️ Trade-off</strong>
+                        <p>VS XGBoost — marginally higher accuracy but slower prediction and harder to explain to
+                            doctors</p>
+                    </div>
+                    <div class="tradeoff-card tradeoff-pro">
+                        <strong>✅ Chose</strong>
+                        <p>Normalizer over StandardScaler — more stable when feature distributions vary widely across
+                            patients</p>
+                    </div>
+                    <div class="tradeoff-card tradeoff-con">
+                        <strong>⚖️ Trade-off</strong>
+                        <p>No real-time retraining — model is serialised (pkl). Retraining requires `train_model.py`
+                            re-run</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer-links">
+                <a href="https://yashs-liver-cirrhosis-prediction-system-uvwq.onrender.com" target="_blank"
+                    rel="noopener" class="btn btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                <a href="https://github.com/YaswanthKumarMallela01/Liver-Cirrhosis-Prediction-System" target="_blank"
+                    rel="noopener" class="btn btn-outline"><i class="fab fa-github"></i> GitHub Repo</a>
+            </div>
+        </div>
     </div>
-    <div class="hero-image-wrap">
-      <div class="hero-ring ring1"></div>
-      <div class="hero-ring ring2"></div>
-      <div class="hero-ring ring3"></div>
-      <img src="Information/Profile Photo.jpg" alt="Yaswanth Kumar Mallela" class="hero-photo" id="heroPhoto" />
-      <div class="hero-photo-glow"></div>
+
+    <!-- ── AI CERT HUB MODAL ── -->
+    <div class="modal" id="certModal" role="dialog" aria-modal="true" aria-labelledby="certModalTitle">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeActiveModal()" aria-label="Close">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon"
+                    style="background:rgba(0,212,255,0.12);border-color:rgba(0,212,255,0.3);color:var(--accent-3)"><i
+                        class="fas fa-certificate"></i></div>
+                <div>
+                    <span class="modal-tag">Case Study · Full-Stack · AI</span>
+                    <h2 id="certModalTitle">AI Certificate Management Hub</h2>
+                </div>
+            </div>
+
+            <div class="modal-outcomes">
+                <div class="outcome"><span class="outcome-val">60%</span><span class="outcome-lbl">Faster
+                        Verification</span></div>
+                <div class="outcome"><span class="outcome-val">PDF/JPG/PNG</span><span class="outcome-lbl">Formats
+                        Supported</span></div>
+                <div class="outcome"><span class="outcome-val">OTP</span><span class="outcome-lbl">Auth Security</span>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h3><i class="fas fa-sitemap"></i> Architecture</h3>
+                <div class="modal-diagram">
+                    <img src="assets/cert_arch.png" alt="AI Certificate Hub architecture diagram" loading="lazy" />
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h3><i class="fas fa-exchange-alt"></i> Data Flow</h3>
+                <ol class="modal-steps">
+                    <li>Student registers → OTP sent via SMTP email, stored hashed in MySQL</li>
+                    <li>User uploads certificate (PDF / JPG / PNG) → validated MIME type server-side</li>
+                    <li>File stored in organised directory; metadata inserted into <code>certificates</code> table</li>
+                    <li>Admin dashboard queries by roll number; deletion restricted to admin role</li>
+                    <li>AI Career Chatbot (in development) will query the certificate set via NLP prompts</li>
+                </ol>
+            </div>
+
+            <div class="modal-section">
+                <h3><i class="fas fa-flask"></i> Tech Choice Rationale</h3>
+                <ul class="modal-list">
+                    <li><strong>PHP + MySQL</strong> chosen for XAMPP-compatible local hosting and free-tier web hosting
+                        compatibility</li>
+                    <li><strong>OTP via email</strong> avoids SMS costs while maintaining genuine 2FA for student
+                        registrations</li>
+                    <li><strong>Prompt Engineering for UI/UX</strong> enabled rapid front-end iteration without a
+                        dedicated designer</li>
+                    <li>Admin role gating done server-side — no client-side trust for delete operations</li>
+                </ul>
+            </div>
+
+            <div class="modal-section">
+                <h3><i class="fas fa-balance-scale"></i> Key Trade-offs</h3>
+                <div class="tradeoffs-grid">
+                    <div class="tradeoff-card tradeoff-pro">
+                        <strong>✅ Chose</strong>
+                        <p>PHP monolith — simpler deployment on shared hosting, fast to prototype, XAMPP compatible</p>
+                    </div>
+                    <div class="tradeoff-card tradeoff-con">
+                        <strong>⚖️ Trade-off</strong>
+                        <p>VS Flask/Node.js — would enable cleaner API layer and easier AI integration later</p>
+                    </div>
+                    <div class="tradeoff-card tradeoff-pro">
+                        <strong>✅ Chose</strong>
+                        <p>Email OTP — zero cost, leverages existing university email infrastructure</p>
+                    </div>
+                    <div class="tradeoff-card tradeoff-con">
+                        <strong>⚖️ Trade-off</strong>
+                        <p>Delivery delay risk during SMTP congestion; fallback mechanism not yet implemented</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer-links">
+                <a href="https://yaswanthaicertificatemanagementhub.free.nf/" target="_blank" rel="noopener"
+                    class="btn btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                <a href="https://github.com/YaswanthKumarMallela01/AI-Certificate-Management-Hub" target="_blank"
+                    rel="noopener" class="btn btn-outline"><i class="fab fa-github"></i> GitHub Repo</a>
+            </div>
+        </div>
     </div>
-    <a href="#about" class="scroll-down" aria-label="Scroll down">
-      <i class="fas fa-chevron-down"></i>
-    </a>
-  </section>
 
-  <!-- ========== ABOUT ========== -->
-  <section class="about section" id="about">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">About Me</span>
-        <h2 class="section-title">Turning Data into <span class="accent-gradient">Insights</span></h2>
-      </div>
-      <div class="about-grid">
-        <div class="about-text" data-aos="fade-right">
-          <p>
-            I'm <strong>Yaswanth Kumar Mallela</strong>, a 3rd-year Computer Science &amp; Engineering student specialising in <strong>Data Science</strong> at <strong>Lovely Professional University</strong>. I'm deeply passionate about building AI-powered applications that solve real-world problems — from clinical prediction systems to autonomous code generation.
-          </p>
-          <p>
-            My work sits at the intersection of <em>machine learning</em>, <em>deep learning</em>, and <em>full-stack deployment</em>. Whether it's training a ConvLSTM autoencoder for surveillance anomaly detection or orchestrating a Gemini-powered code synthesis engine, I care about end-to-end delivery — models that actually work in production.
-          </p>
-          <p>
-            I'm currently seeking internship and project collaboration opportunities where I can contribute to impactful AI/ML initiatives, sharpen my skills, and grow alongside a driven team.
-          </p>
-          <div class="about-highlights">
-            <div class="highlight-card">
-              <i class="fas fa-graduation-cap"></i>
-              <div>
-                <strong>B.Tech CSE (Data Science)</strong>
-                <span>Lovely Professional University</span>
-              </div>
+    <!-- ── LLM CODE ENGINE MODAL ── -->
+    <div class="modal" id="llmModal" role="dialog" aria-modal="true" aria-labelledby="llmModalTitle">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeActiveModal()" aria-label="Close">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon"
+                    style="background:rgba(232,67,147,0.12);border-color:rgba(232,67,147,0.3);color:var(--accent-2)"><i
+                        class="fas fa-robot"></i></div>
+                <div>
+                    <span class="modal-tag">Case Study · LLM · Automation</span>
+                    <h2 id="llmModalTitle">LLM-Based Code Synthesis Engine</h2>
+                </div>
             </div>
-            <div class="highlight-card">
-              <i class="fas fa-map-marker-alt"></i>
-              <div>
-                <strong>Location</strong>
-                <span>Punjab, India</span>
-              </div>
+
+            <div class="modal-outcomes">
+                <div class="outcome"><span class="outcome-val">0</span><span class="outcome-lbl">Manual Steps</span>
+                </div>
+                <div class="outcome"><span class="outcome-val">1-click</span><span class="outcome-lbl">Workflow</span>
+                </div>
+                <div class="outcome"><span class="outcome-val">100%</span><span class="outcome-lbl">Auto-Generated
+                        Code</span></div>
             </div>
-            <div class="highlight-card">
-              <i class="fas fa-phone"></i>
-              <div>
-                <strong>Phone</strong>
-                <span><a href="tel:+917013374194">+91 70133 74194</a></span>
-              </div>
+
+            <div class="modal-section">
+                <h3><i class="fas fa-sitemap"></i> Architecture</h3>
+                <div class="modal-diagram">
+                    <img src="assets/llm_arch.png" alt="LLM Code Synthesis Engine architecture diagram"
+                        loading="lazy" />
+                </div>
             </div>
-            <div class="highlight-card">
-              <i class="fas fa-briefcase"></i>
-              <div>
-                <strong>Status</strong>
-                <span class="status-open">Open to Internships</span>
-              </div>
+
+            <div class="modal-section">
+                <h3><i class="fas fa-exchange-alt"></i> Data Flow</h3>
+                <ol class="modal-steps">
+                    <li>User edits <code>question_requirements.json</code> with problem statement and dataset path</li>
+                    <li>User double-clicks <code>Run.bat</code> → silently launches <code>main.pyw</code> (no terminal
+                        window)</li>
+                    <li><code>main.pyw</code> reads both JSON configs, constructs a strict rule-based prompt</li>
+                    <li>Prompt sent to Gemini API → model returns executable Python code block</li>
+                    <li>Code is extracted, cleaned, and written directly to the project folder as a <code>.py</code>
+                        file</li>
+                    <li>Process terminates — fully headless, zero user interaction</li>
+                </ol>
             </div>
-          </div>
-          <a href="Information/CVF.pdf" download class="btn btn-primary mt-2">
-            <i class="fas fa-download"></i> Download Resume
-          </a>
+
+            <div class="modal-section">
+                <h3><i class="fas fa-flask"></i> Design Rationale</h3>
+                <ul class="modal-list">
+                    <li><strong>Gemini API</strong> chosen for generous free-tier rate limits and strong Python code
+                        generation</li>
+                    <li><strong>.pyw extension</strong> suppresses console window on Windows — crucial for seamless UX
+                    </li>
+                    <li><strong>JSON config separation</strong> decouples system config from problem definitions — users
+                        only edit question JSON</li>
+                    <li><strong>Policy-based prompting</strong> enforces college-exam style: minimal imports, procedural
+                        flow, no explanatory comments</li>
+                </ul>
+            </div>
+
+            <div class="modal-section">
+                <h3><i class="fas fa-balance-scale"></i> Key Trade-offs</h3>
+                <div class="tradeoffs-grid">
+                    <div class="tradeoff-card tradeoff-pro">
+                        <strong>✅ Chose</strong>
+                        <p>Strict prompt constraints — ensures deterministic, exam-aligned output format every run</p>
+                    </div>
+                    <div class="tradeoff-card tradeoff-con">
+                        <strong>⚖️ Trade-off</strong>
+                        <p>Reduced creative latitude of the LLM; occasional edge-case problems may need manual prompt
+                            tweaks</p>
+                    </div>
+                    <div class="tradeoff-card tradeoff-pro">
+                        <strong>✅ Chose</strong>
+                        <p>Background execution via .pyw — clean UX, no terminal required for end users</p>
+                    </div>
+                    <div class="tradeoff-card tradeoff-con">
+                        <strong>⚖️ Trade-off</strong>
+                        <p>Harder to debug — errors are silent; planned fix is logging to a local file</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer-links">
+                <a href="https://github.com/YaswanthKumarMallela01/LLM-Based-Code-Synthesis-Engine" target="_blank"
+                    rel="noopener" class="btn btn-outline"><i class="fab fa-github"></i> GitHub Repo</a>
+            </div>
         </div>
-        <div class="about-stats" data-aos="fade-left">
-          <div class="stat-card">
-            <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
-            <div class="stat-number" data-target="4">0</div>
-            <div class="stat-label">Projects Built</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-icon"><i class="fas fa-code-branch"></i></div>
-            <div class="stat-number" data-target="3">0</div>
-            <div class="stat-label">Live Deployments</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-icon"><i class="fas fa-brain"></i></div>
-            <div class="stat-number" data-target="8">0</div>
-            <div class="stat-label">Technologies</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-icon"><i class="fas fa-star"></i></div>
-            <div class="stat-number" data-target="3">0</div>
-            <div class="stat-label">Years of Coding</div>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
 
-  <!-- ========== SKILLS ========== -->
-  <section class="skills section" id="skills">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Skills</span>
-        <h2 class="section-title">My <span class="accent-gradient">Tech Stack</span></h2>
-      </div>
-      <div class="skills-categories">
-
-        <div class="skill-category" data-aos="fade-up">
-          <h3 class="skill-cat-title"><i class="fas fa-brain"></i> AI &amp; Machine Learning</h3>
-          <div class="skill-pills">
-            <span class="skill-pill">Python</span>
-            <span class="skill-pill">scikit-learn</span>
-            <span class="skill-pill">TensorFlow / Keras</span>
-            <span class="skill-pill">PyTorch</span>
-            <span class="skill-pill">OpenCV</span>
-            <span class="skill-pill">YOLO</span>
-            <span class="skill-pill">Gemini API</span>
-            <span class="skill-pill">LLMs / Prompt Engineering</span>
-            <span class="skill-pill">ConvLSTM</span>
-            <span class="skill-pill">Random Forest</span>
-          </div>
-        </div>
-
-        <div class="skill-category" data-aos="fade-up" data-delay="100">
-          <h3 class="skill-cat-title"><i class="fas fa-globe"></i> Web Development</h3>
-          <div class="skill-pills">
-            <span class="skill-pill">Flask</span>
-            <span class="skill-pill">HTML5</span>
-            <span class="skill-pill">CSS3</span>
-            <span class="skill-pill">JavaScript</span>
-            <span class="skill-pill">PHP</span>
-            <span class="skill-pill">MySQL</span>
-          </div>
-        </div>
-
-        <div class="skill-category" data-aos="fade-up" data-delay="200">
-          <h3 class="skill-cat-title"><i class="fas fa-cloud"></i> DevOps &amp; Tools</h3>
-          <div class="skill-pills">
-            <span class="skill-pill">AWS (EC2 / S3)</span>
-            <span class="skill-pill">Git &amp; GitHub</span>
-            <span class="skill-pill">Docker</span>
-            <span class="skill-pill">Render</span>
-            <span class="skill-pill">XAMPP</span>
-            <span class="skill-pill">Jupyter Notebook</span>
-            <span class="skill-pill">VS Code</span>
-          </div>
-        </div>
-
-        <div class="skill-category" data-aos="fade-up" data-delay="300">
-          <h3 class="skill-cat-title"><i class="fas fa-chart-bar"></i> Data Science</h3>
-          <div class="skill-pills">
-            <span class="skill-pill">Pandas</span>
-            <span class="skill-pill">NumPy</span>
-            <span class="skill-pill">Matplotlib</span>
-            <span class="skill-pill">Seaborn</span>
-            <span class="skill-pill">Data Preprocessing</span>
-            <span class="skill-pill">Feature Engineering</span>
-            <span class="skill-pill">Model Evaluation</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== PROJECTS ========== -->
-  <section class="projects section" id="projects">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Projects</span>
-        <h2 class="section-title">Things I've <span class="accent-gradient">Built</span></h2>
-      </div>
-      <div class="projects-grid" id="projectsGrid">
-
-        <!-- Liver Cirrhosis -->
-        <div class="project-card" data-aos="fade-up">
-          <div class="project-card-header">
-            <div class="project-icon"><i class="fas fa-heartbeat"></i></div>
-            <div class="project-badges">
-              <span class="badge badge-live">🟢 Live</span>
-              <span class="badge badge-ml">ML</span>
+    <!-- ── SURVEILLANCE MODAL ── -->
+    <div class="modal" id="survModal" role="dialog" aria-modal="true" aria-labelledby="survModalTitle">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeActiveModal()" aria-label="Close">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon"
+                    style="background:rgba(245,158,11,0.12);border-color:rgba(245,158,11,0.3);color:#f59e0b"><i
+                        class="fas fa-video"></i></div>
+                <div>
+                    <span class="modal-tag">Case Study · Deep Learning · Freelance</span>
+                    <h2 id="survModalTitle">Abnormal Event Detection in Surveillance</h2>
+                </div>
             </div>
-          </div>
-          <h3 class="project-title">Liver Cirrhosis Prediction System</h3>
-          <p class="project-desc">
-            A Flask-powered web application that predicts liver cirrhosis likelihood from 19 medical parameters using a Random Forest Classifier. Provides real-time predictions, confidence scores, and personalised health tips.
-          </p>
-          <div class="project-tech">
-            <span>Python</span><span>Flask</span><span>scikit-learn</span><span>Random Forest</span><span>Render</span>
-          </div>
-          <div class="project-links">
-            <a href="https://yashs-liver-cirrhosis-prediction-system-uvwq.onrender.com" target="_blank" rel="noopener" class="proj-link proj-link-live">
-              <i class="fas fa-external-link-alt"></i> Live Demo
-            </a>
-            <a href="https://github.com/YaswanthKumarMallela01/Liver-Cirrhosis-Prediction-System" target="_blank" rel="noopener" class="proj-link proj-link-gh">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-          </div>
-        </div>
 
-        <!-- AI Certificate Hub -->
-        <div class="project-card" data-aos="fade-up" style="animation-delay:0.1s">
-          <div class="project-card-header">
-            <div class="project-icon"><i class="fas fa-certificate"></i></div>
-            <div class="project-badges">
-              <span class="badge badge-live">🟢 Live</span>
-              <span class="badge badge-ai">AI</span>
+            <div class="modal-outcomes">
+                <div class="outcome"><span class="outcome-val">20 FPS</span><span class="outcome-lbl">Live Stream
+                        Handling</span></div>
+                <div class="outcome"><span class="outcome-val">ConvLSTM</span><span class="outcome-lbl">Core
+                        Architecture</span></div>
+                <div class="outcome"><span class="outcome-val">Real-time</span><span class="outcome-lbl">Anomaly
+                        Alerting</span></div>
             </div>
-          </div>
-          <h3 class="project-title">AI Certificate Management Hub</h3>
-          <p class="project-desc">
-            A secure, web-based platform to upload, organise, and manage student certificates with OTP authentication. Built with PHP &amp; MySQL, featuring an admin dashboard and an upcoming AI Career Assistant chatbot.
-          </p>
-          <div class="project-tech">
-            <span>PHP</span><span>MySQL</span><span>HTML/CSS/JS</span><span>OTP Auth</span><span>Prompt Engineering</span>
-          </div>
-          <div class="project-links">
-            <a href="https://yaswanthaicertificatemanagementhub.free.nf/" target="_blank" rel="noopener" class="proj-link proj-link-live">
-              <i class="fas fa-external-link-alt"></i> Live Demo
-            </a>
-            <a href="https://github.com/YaswanthKumarMallela01/AI-Certificate-Management-Hub" target="_blank" rel="noopener" class="proj-link proj-link-gh">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-          </div>
-        </div>
 
-        <!-- LLM Code Engine -->
-        <div class="project-card" data-aos="fade-up" style="animation-delay:0.2s">
-          <div class="project-card-header">
-            <div class="project-icon"><i class="fas fa-robot"></i></div>
-            <div class="project-badges">
-              <span class="badge badge-ai">AI</span>
-              <span class="badge badge-ml">LLM</span>
+            <div class="modal-section">
+                <h3><i class="fas fa-sitemap"></i> Architecture</h3>
+                <div class="modal-diagram">
+                    <img src="assets/surveillance_arch.png" alt="Abnormal event detection system architecture"
+                        loading="lazy" />
+                </div>
             </div>
-          </div>
-          <h3 class="project-title">LLM-Based Code Synthesis Engine</h3>
-          <p class="project-desc">
-            An automated Python system that generates fully executable code from JSON problem definitions via the Gemini API. Runs silently in the background with strict policy-based prompt enforcement — zero user interaction needed.
-          </p>
-          <div class="project-tech">
-            <span>Python</span><span>Gemini API</span><span>JSON</span><span>Automation</span><span>LLM</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/YaswanthKumarMallela01/LLM-Based-Code-Synthesis-Engine" target="_blank" rel="noopener" class="proj-link proj-link-gh">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-          </div>
-        </div>
 
-        <!-- Abnormal Event Detector (Freelance) -->
-        <div class="project-card featured-card" data-aos="fade-up" style="animation-delay:0.3s">
-          <div class="project-card-header">
-            <div class="project-icon"><i class="fas fa-video"></i></div>
-            <div class="project-badges">
-              <span class="badge badge-live">🟢 Live</span>
-              <span class="badge badge-freelance">Freelance</span>
-              <span class="badge badge-dl">Deep Learning</span>
+            <div class="modal-section">
+                <h3><i class="fas fa-exchange-alt"></i> Data Flow</h3>
+                <ol class="modal-steps">
+                    <li>Input: video file upload OR live webcam/IP camera feed</li>
+                    <li>OpenCV extracts frames; resized to 224×224 and normalised to [0,1]</li>
+                    <li>Sequences of 10 frames fed into the <strong>ConvLSTM Autoencoder</strong></li>
+                    <li>Autoencoder reconstructs the sequence; reconstruction error computed per frame</li>
+                    <li>Adaptive thresholding flags frames where error &gt; learned baseline</li>
+                    <li>YOLO detects objects; Haar cascades flag faces in flagged frames for privacy-aware alerts</li>
+                    <li>Frontend overlays anomaly score curve and highlighted frame gallery</li>
+                </ol>
             </div>
-          </div>
-          <h3 class="project-title">Abnormal Event Detection in Surveillance</h3>
-          <p class="project-desc">
-            Intelligent surveillance pipeline using a ConvLSTM autoencoder to detect anomalies in video streams. Supports video upload, live camera feed, and an IP-camera middleware API. Built for a client as a freelance project and deployed to production.
-          </p>
-          <div class="project-tech">
-            <span>PyTorch</span><span>ConvLSTM</span><span>OpenCV</span><span>YOLO</span><span>Flask</span><span>Render</span>
-          </div>
-          <div class="project-links">
-            <a href="https://abnormal-event-detector.onrender.com/" target="_blank" rel="noopener" class="proj-link proj-link-live">
-              <i class="fas fa-external-link-alt"></i> Live Demo
-            </a>
-          </div>
-          <div class="featured-label">⭐ Freelance</div>
-        </div>
 
-      </div>
+            <div class="modal-section">
+                <h3><i class="fas fa-flask"></i> Model Choice Rationale</h3>
+                <ul class="modal-list">
+                    <li><strong>ConvLSTM Autoencoder</strong> outperforms frame-difference methods by learning
+                        spatio-temporal normality patterns</li>
+                    <li>Unsupervised by design — trained only on normal footage, avoiding the need for labelled anomaly
+                        datasets (rare in practice)</li>
+                    <li>Reconstruction error as anomaly score is threshold-tunable without retraining</li>
+                    <li>YOLO used as a secondary signal — object-level context improves alert precision for the client
+                        use case</li>
+                </ul>
+            </div>
+
+            <div class="modal-section">
+                <h3><i class="fas fa-balance-scale"></i> Key Trade-offs</h3>
+                <div class="tradeoffs-grid">
+                    <div class="tradeoff-card tradeoff-pro">
+                        <strong>✅ Chose</strong>
+                        <p>ConvLSTM AE — trains on normal-only data, zero labelling cost, generalises across scenes</p>
+                    </div>
+                    <div class="tradeoff-card tradeoff-con">
+                        <strong>⚖️ Trade-off</strong>
+                        <p>VS supervised CNN — supervised model needs thousands of labelled anomaly clips the client
+                            didn't have</p>
+                    </div>
+                    <div class="tradeoff-card tradeoff-pro">
+                        <strong>✅ Chose</strong>
+                        <p>Adaptive thresholding — adjusts per-scene rather than a hard-coded global cutoff</p>
+                    </div>
+                    <div class="tradeoff-card tradeoff-con">
+                        <strong>⚖️ Trade-off</strong>
+                        <p>Browser can't access RTSP directly — IP camera middleware required (documented with API
+                            endpoint)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer-links">
+                <a href="https://abnormal-event-detector.onrender.com/" target="_blank" rel="noopener"
+                    class="btn btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            </div>
+        </div>
     </div>
-  </section>
 
-  <!-- ========== CONTACT ========== -->
-  <section class="contact section" id="contact">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Contact</span>
-        <h2 class="section-title">Let's <span class="accent-gradient">Connect</span></h2>
-        <p class="section-sub">I'm open to internship roles, collaborations, and interesting conversations. Drop me a message!</p>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-info" data-aos="fade-right">
-          <div class="contact-card">
-            <a href="mailto:yashwanthkumarmallela@gmail.com" class="contact-item">
-              <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
-              <div>
-                <strong>Email</strong>
-                <span>yashwanthkumarmallela@gmail.com</span>
-              </div>
-            </a>
-            <a href="tel:+917013374194" class="contact-item">
-              <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
-              <div>
-                <strong>Phone</strong>
-                <span>+91 70133 74194</span>
-              </div>
-            </a>
-            <a href="https://www.linkedin.com/in/yaswanthkumar1/" target="_blank" rel="noopener" class="contact-item">
-              <div class="contact-item-icon"><i class="fab fa-linkedin-in"></i></div>
-              <div>
-                <strong>LinkedIn</strong>
-                <span>yaswanthkumar1</span>
-              </div>
-            </a>
-            <a href="https://github.com/YaswanthKumarMallela01" target="_blank" rel="noopener" class="contact-item">
-              <div class="contact-item-icon"><i class="fab fa-github"></i></div>
-              <div>
-                <strong>GitHub</strong>
-                <span>YaswanthKumarMallela01</span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <form class="contact-form" id="contactForm" data-aos="fade-left" action="mailto:yashwanthkumarmallela@gmail.com" method="post" enctype="text/plain">
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="Name" placeholder="John Doe" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="Email" placeholder="john@example.com" required />
-          </div>
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="Subject" placeholder="Internship Opportunity / Collaboration" />
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="Message" rows="5" placeholder="Tell me about the opportunity..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary w-full" id="sendBtn">
-            <i class="fas fa-paper-plane"></i> Send Message
-          </button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <span class="nav-logo">YK<span class="accent">.</span></span>
-          <p>Building the future, one model at a time.</p>
-        </div>
-        <div class="footer-links">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </div>
-        <div class="footer-socials">
-          <a href="https://www.linkedin.com/in/yaswanthkumar1/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://github.com/YaswanthKumarMallela01" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="mailto:yashwanthkumarmallela@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2025 Yaswanth Kumar Mallela · Crafted with <span style="color:#e84393">❤</span> · Hosted on AWS</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

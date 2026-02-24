@@ -250,3 +250,42 @@ document.body.style.transition = 'opacity 0.5s ease';
 window.addEventListener('load', () => {
   document.body.style.opacity = '1';
 });
+
+// ─── CASE STUDY MODALS ───────────────────────────
+const backdrop = document.getElementById('modalBackdrop');
+let activeModal = null;
+
+function openModal(id) {
+  if (activeModal) closeActiveModal(false);
+  const modal = document.getElementById(id);
+  if (!modal) return;
+  activeModal = modal;
+  modal.classList.add('modal-open');
+  backdrop.classList.add('active');
+  document.body.style.overflow = 'hidden';
+  modal.focus && modal.focus();
+
+  // Attach hover effects to modal buttons
+  modal.querySelectorAll('a, button').forEach(el => {
+    el.addEventListener('mouseenter', () => ring.classList.add('hovered'));
+    el.addEventListener('mouseleave', () => ring.classList.remove('hovered'));
+  });
+}
+
+function closeActiveModal(restoreScroll = true) {
+  if (!activeModal) return;
+  activeModal.classList.remove('modal-open');
+  backdrop.classList.remove('active');
+  if (restoreScroll) document.body.style.overflow = '';
+  activeModal = null;
+}
+
+// Keyboard: Escape closes modal
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeActiveModal();
+});
+
+// Make openModal globally accessible (called from onclick in HTML)
+window.openModal = openModal;
+window.closeActiveModal = closeActiveModal;
+

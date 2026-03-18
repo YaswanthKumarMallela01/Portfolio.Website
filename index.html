@@ -153,24 +153,24 @@
                             </div>
                         </div>
                     </div>
-                    <a href="Information/CVF.pdf" download class="btn btn-primary mt-2">
+                    <a href="Information/GeneralCV2.pdf" download class="btn btn-primary mt-2">
                         <i class="fas fa-download"></i> Download Resume
                     </a>
                 </div>
                 <div class="about-stats" data-aos="fade-left">
                     <div class="stat-card">
                         <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
-                        <div class="stat-number" data-target="4">0</div>
+                        <div class="stat-number" data-target="8">0</div>
                         <div class="stat-label">Projects Built</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-icon"><i class="fas fa-code-branch"></i></div>
-                        <div class="stat-number" data-target="3">0</div>
+                        <div class="stat-number" data-target="4">0</div>
                         <div class="stat-label">Live Deployments</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-icon"><i class="fas fa-brain"></i></div>
-                        <div class="stat-number" data-target="8">0</div>
+                        <div class="stat-number" data-target="15">0</div>
                         <div class="stat-label">Technologies</div>
                     </div>
                     <div class="stat-card">
@@ -204,17 +204,23 @@
                         <span class="skill-pill">LLMs / Prompt Engineering</span>
                         <span class="skill-pill">ConvLSTM</span>
                         <span class="skill-pill">Random Forest</span>
+                        <span class="skill-pill">Sentence-Transformers</span>
+                        <span class="skill-pill">ResNet50</span>
+                        <span class="skill-pill">NLP / NLTK</span>
                     </div>
                 </div>
                 <div class="skill-category" data-aos="fade-up" data-delay="100">
                     <h3 class="skill-cat-title"><i class="fas fa-globe"></i> Web Development</h3>
                     <div class="skill-pills">
                         <span class="skill-pill">Flask</span>
+                        <span class="skill-pill">Streamlit</span>
                         <span class="skill-pill">HTML5</span>
                         <span class="skill-pill">CSS3</span>
                         <span class="skill-pill">JavaScript</span>
                         <span class="skill-pill">PHP</span>
                         <span class="skill-pill">MySQL</span>
+                        <span class="skill-pill">SQLAlchemy</span>
+                        <span class="skill-pill">WebSockets / Socket.IO</span>
                     </div>
                 </div>
                 <div class="skill-category" data-aos="fade-up" data-delay="200">
@@ -227,6 +233,9 @@
                         <span class="skill-pill">XAMPP</span>
                         <span class="skill-pill">Jupyter Notebook</span>
                         <span class="skill-pill">VS Code</span>
+                        <span class="skill-pill">Truffle / Ganache</span>
+                        <span class="skill-pill">IPFS / Pinata</span>
+                        <span class="skill-pill">Firebase</span>
                     </div>
                 </div>
                 <div class="skill-category" data-aos="fade-up" data-delay="300">
@@ -239,6 +248,15 @@
                         <span class="skill-pill">Data Preprocessing</span>
                         <span class="skill-pill">Feature Engineering</span>
                         <span class="skill-pill">Model Evaluation</span>
+                    </div>
+                </div>
+                <div class="skill-category" data-aos="fade-up" data-delay="400">
+                    <h3 class="skill-cat-title"><i class="fas fa-cubes"></i> Blockchain</h3>
+                    <div class="skill-pills">
+                        <span class="skill-pill">Solidity</span>
+                        <span class="skill-pill">Ethereum</span>
+                        <span class="skill-pill">Web3.py</span>
+                        <span class="skill-pill">Smart Contracts</span>
                     </div>
                 </div>
             </div>
@@ -275,10 +293,15 @@
                 <span class="section-tag">Projects</span>
                 <h2 class="section-title">Things I've <span class="accent-gradient">Built</span></h2>
             </div>
-            <div class="projects-grid">
+            <div class="project-filters" id="projectFilters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="personal">Personal</button>
+                <button class="filter-btn" data-filter="freelance">Freelance</button>
+            </div>
+            <div class="projects-grid" id="projectsGrid">
 
                 <!-- ── Liver Cirrhosis ── -->
-                <div class="project-card" data-aos="fade-up">
+                <div class="project-card" data-aos="fade-up" data-category="personal">
                     <div class="project-card-header">
                         <div class="project-icon"><i class="fas fa-heartbeat"></i></div>
                         <div class="project-badges">
@@ -310,7 +333,7 @@
                             aria-label="View Liver Cirrhosis case study">
                             <i class="fas fa-book-open"></i> Case Study
                         </button>
-                        <a href="https://yashs-liver-cirrhosis-prediction-system-uvwq.onrender.com" target="_blank"
+                        <a href="https://yashs-liver-cirrhosis-prediction-system-g9lz.onrender.com/login" target="_blank"
                             rel="noopener" class="proj-link proj-link-live">
                             <i class="fas fa-external-link-alt"></i> Live Demo
                         </a>
@@ -322,7 +345,7 @@
                 </div>
 
                 <!-- ── AI Certificate Hub ── -->
-                <div class="project-card" data-aos="fade-up" style="animation-delay:0.1s">
+                <div class="project-card" data-aos="fade-up" style="animation-delay:0.1s" data-category="personal">
                     <div class="project-card-header">
                         <div class="project-icon"><i class="fas fa-certificate"></i></div>
                         <div class="project-badges">
@@ -365,7 +388,7 @@
                 </div>
 
                 <!-- ── LLM Code Engine ── -->
-                <div class="project-card" data-aos="fade-up" style="animation-delay:0.2s">
+                <div class="project-card" data-aos="fade-up" style="animation-delay:0.2s" data-category="personal">
                     <div class="project-card-header">
                         <div class="project-icon"><i class="fas fa-robot"></i></div>
                         <div class="project-badges">
@@ -404,7 +427,7 @@
                 </div>
 
                 <!-- ── Abnormal Event Detector (Freelance) ── -->
-                <div class="project-card featured-card" data-aos="fade-up" style="animation-delay:0.3s">
+                <div class="project-card featured-card" data-aos="fade-up" style="animation-delay:0.3s" data-category="freelance">
                     <div class="project-card-header">
                         <div class="project-icon"><i class="fas fa-video"></i></div>
                         <div class="project-badges">
@@ -438,6 +461,156 @@
                         <a href="https://abnormal-event-detector.onrender.com/" target="_blank" rel="noopener"
                             class="proj-link proj-link-live">
                             <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <a href="https://github.com/YaswanthKumarMallela01/Abnormal-Event-Detection"
+                            target="_blank" rel="noopener" class="proj-link proj-link-gh">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                    <div class="featured-label">⭐ Freelance</div>
+                </div>
+
+                <!-- ── CertChainX (Freelance) ── -->
+                <div class="project-card featured-card" data-aos="fade-up" style="animation-delay:0.1s" data-category="freelance">
+                    <div class="project-card-header">
+                        <div class="project-icon" style="background:rgba(0,212,255,0.12);border-color:rgba(0,212,255,0.2);color:var(--accent-3)"><i class="fas fa-link"></i></div>
+                        <div class="project-badges">
+                            <span class="badge badge-freelance">Freelance</span>
+                            <span class="badge badge-blockchain">Blockchain</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">CertChainX — Blockchain Certificate Validation</h3>
+                    <p class="project-desc">
+                        A decentralized application (dApp) for tamper-proof issuance and verification of academic
+                        certificates. Certificate metadata is stored on the Ethereum blockchain, and PDFs are
+                        pinned on IPFS via Pinata — making them permanently verifiable.
+                    </p>
+                    <div class="project-metrics">
+                        <div class="metric"><span class="metric-value">IPFS</span><span class="metric-label">Decentralised Storage</span></div>
+                        <div class="metric"><span class="metric-value">Dual</span><span class="metric-label">Verification Modes</span></div>
+                        <div class="metric"><span class="metric-value">Docker</span><span class="metric-label">One-Click Deploy</span></div>
+                    </div>
+                    <div class="project-tech">
+                        <span>Solidity</span><span>Ethereum</span><span>Truffle</span><span>IPFS / Pinata</span><span>Streamlit</span><span>Firebase Auth</span><span>Web3.py</span><span>Docker</span>
+                    </div>
+                    <div class="project-links">
+                        <button class="proj-link proj-link-case" onclick="openModal('certChainModal')"
+                            aria-label="View CertChainX case study">
+                            <i class="fas fa-book-open"></i> Case Study
+                        </button>
+                        <a href="https://github.com/YaswanthKumarMallela01/CertChainX"
+                            target="_blank" rel="noopener" class="proj-link proj-link-gh">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                    <div class="featured-label">⭐ Freelance</div>
+                </div>
+
+                <!-- ── RecoverAI (Freelance) ── -->
+                <div class="project-card featured-card" data-aos="fade-up" style="animation-delay:0.2s" data-category="freelance">
+                    <div class="project-card-header">
+                        <div class="project-icon" style="background:rgba(108,99,255,0.12);border-color:rgba(108,99,255,0.2)"><i class="fas fa-search"></i></div>
+                        <div class="project-badges">
+                            <span class="badge badge-freelance">Freelance</span>
+                            <span class="badge badge-ai">AI</span>
+                            <span class="badge badge-dl">Deep Learning</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">RecoverAI — Intelligent Lost &amp; Found Platform</h3>
+                    <p class="project-desc">
+                        An AI-powered web application that matches lost items with found ones using NLP
+                        (Sentence-Transformers) and Computer Vision (ResNet50). Features hybrid 40% text / 60%
+                        image scoring, a claim workflow, role-based access, and an interactive analytics dashboard.
+                    </p>
+                    <div class="project-metrics">
+                        <div class="metric"><span class="metric-value">40:60</span><span class="metric-label">Text : Image Score</span></div>
+                        <div class="metric"><span class="metric-value">ResNet50</span><span class="metric-label">Vision Model</span></div>
+                        <div class="metric"><span class="metric-value">RBAC</span><span class="metric-label">Access Control</span></div>
+                    </div>
+                    <div class="project-tech">
+                        <span>Flask</span><span>PyTorch</span><span>ResNet50</span><span>Sentence-Transformers</span><span>SQLAlchemy</span><span>Chart.js</span><span>Bootstrap 5</span>
+                    </div>
+                    <div class="project-links">
+                        <button class="proj-link proj-link-case" onclick="openModal('recoverModal')"
+                            aria-label="View RecoverAI case study">
+                            <i class="fas fa-book-open"></i> Case Study
+                        </button>
+                        <a href="https://github.com/YaswanthKumarMallela01/RecoverAI"
+                            target="_blank" rel="noopener" class="proj-link proj-link-gh">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                    <div class="featured-label">⭐ Freelance</div>
+                </div>
+
+                <!-- ── SocialPulse-AI (Freelance) ── -->
+                <div class="project-card featured-card" data-aos="fade-up" style="animation-delay:0.3s" data-category="freelance">
+                    <div class="project-card-header">
+                        <div class="project-icon" style="background:rgba(232,67,147,0.12);border-color:rgba(232,67,147,0.2);color:var(--accent-2)"><i class="fas fa-chart-line"></i></div>
+                        <div class="project-badges">
+                            <span class="badge badge-freelance">Freelance</span>
+                            <span class="badge badge-ml">ML</span>
+                            <span class="badge badge-nlp">NLP</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">SocialPulse AI — Sentiment Analytics Dashboard</h3>
+                    <p class="project-desc">
+                        A Flask-based web app for text sentiment analysis featuring a modern dashboard UI.
+                        Includes a TF-IDF + classic-classifier ML pipeline, batch CSV analysis, dataset explorer,
+                        model metrics comparison, prediction history, and a REST API.
+                    </p>
+                    <div class="project-metrics">
+                        <div class="metric"><span class="metric-value">TF-IDF</span><span class="metric-label">Feature Extraction</span></div>
+                        <div class="metric"><span class="metric-value">REST</span><span class="metric-label">API Endpoint</span></div>
+                        <div class="metric"><span class="metric-value">Batch</span><span class="metric-label">CSV Analysis</span></div>
+                    </div>
+                    <div class="project-tech">
+                        <span>Python</span><span>Flask</span><span>scikit-learn</span><span>NLTK</span><span>Pandas</span><span>Chart.js</span>
+                    </div>
+                    <div class="project-links">
+                        <button class="proj-link proj-link-case" onclick="openModal('socialModal')"
+                            aria-label="View SocialPulse AI case study">
+                            <i class="fas fa-book-open"></i> Case Study
+                        </button>
+                        <a href="https://github.com/YaswanthKumarMallela01/SocialPulse-AI"
+                            target="_blank" rel="noopener" class="proj-link proj-link-gh">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                    <div class="featured-label">⭐ Freelance</div>
+                </div>
+
+                <!-- ── NovaChat (Freelance) ── -->
+                <div class="project-card featured-card" data-aos="fade-up" style="animation-delay:0.4s" data-category="freelance">
+                    <div class="project-card-header">
+                        <div class="project-icon" style="background:rgba(34,197,94,0.12);border-color:rgba(34,197,94,0.2);color:#22c55e"><i class="fas fa-comments"></i></div>
+                        <div class="project-badges">
+                            <span class="badge badge-freelance">Freelance</span>
+                            <span class="badge badge-web">Web App</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">NovaChat — Anonymous 1:1 Real-Time Chat</h3>
+                    <p class="project-desc">
+                        A lightweight random 1:1 chat application with email/password auth,
+                        real-time messaging via Socket.IO / WebSockets, typing indicators, message
+                        timestamps, presence tracking, and one-click deployment to Render.
+                    </p>
+                    <div class="project-metrics">
+                        <div class="metric"><span class="metric-value">Real-time</span><span class="metric-label">WebSocket Chat</span></div>
+                        <div class="metric"><span class="metric-value">1:1</span><span class="metric-label">Random Match</span></div>
+                        <div class="metric"><span class="metric-value">Render</span><span class="metric-label">Deploy-Ready</span></div>
+                    </div>
+                    <div class="project-tech">
+                        <span>Flask</span><span>Flask-SocketIO</span><span>SQLAlchemy</span><span>WebSockets</span><span>Flask-Login</span><span>PostgreSQL</span>
+                    </div>
+                    <div class="project-links">
+                        <button class="proj-link proj-link-case" onclick="openModal('novaModal')"
+                            aria-label="View NovaChat case study">
+                            <i class="fas fa-book-open"></i> Case Study
+                        </button>
+                        <a href="https://github.com/YaswanthKumarMallela01/NovaChat"
+                            target="_blank" rel="noopener" class="proj-link proj-link-gh">
+                            <i class="fab fa-github"></i> GitHub
                         </a>
                     </div>
                     <div class="featured-label">⭐ Freelance</div>
@@ -637,7 +810,7 @@
             </div>
 
             <div class="modal-footer-links">
-                <a href="https://yashs-liver-cirrhosis-prediction-system-uvwq.onrender.com" target="_blank"
+                <a href="https://yashs-liver-cirrhosis-prediction-system-g9lz.onrender.com/login" target="_blank"
                     rel="noopener" class="btn btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                 <a href="https://github.com/YaswanthKumarMallela01/Liver-Cirrhosis-Prediction-System" target="_blank"
                     rel="noopener" class="btn btn-outline"><i class="fab fa-github"></i> GitHub Repo</a>
@@ -903,6 +1076,295 @@
             <div class="modal-footer-links">
                 <a href="https://abnormal-event-detector.onrender.com/" target="_blank" rel="noopener"
                     class="btn btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── CERTCHAINX MODAL ── -->
+    <div class="modal" id="certChainModal" role="dialog" aria-modal="true" aria-labelledby="certChainModalTitle">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeActiveModal()" aria-label="Close">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon"
+                    style="background:rgba(20,184,166,0.12);border-color:rgba(20,184,166,0.3);color:#14b8a6"><i
+                        class="fas fa-link"></i></div>
+                <div>
+                    <span class="modal-tag">Case Study · Blockchain · Freelance</span>
+                    <h2 id="certChainModalTitle">CertChainX — Blockchain Certificate Validation</h2>
+                </div>
+            </div>
+
+            <div class="modal-outcomes">
+                <div class="outcome"><span class="outcome-val">IPFS</span><span class="outcome-lbl">Decentralised Storage</span></div>
+                <div class="outcome"><span class="outcome-val">Dual</span><span class="outcome-lbl">Verification Modes</span></div>
+                <div class="outcome"><span class="outcome-val">Docker</span><span class="outcome-lbl">One-Click Deploy</span></div>
+            </div>
+
+            <div class="modal-section">
+                <h3><i class="fas fa-exchange-alt"></i> Data Flow</h3>
+                <ol class="modal-steps">
+                    <li>Institute logs in with pre-configured credentials stored in <code>.env</code></li>
+                    <li>Institute fills certificate form (UID, candidate name, course, organisation)</li>
+                    <li>System generates a PDF certificate using <code>ReportLab</code> and uploads it to IPFS via the Pinata API</li>
+                    <li>The IPFS content hash + metadata is written to the Ethereum smart contract via <code>Web3.py</code></li>
+                    <li>Verifier uploads a certificate PDF or enters a Certificate ID</li>
+                    <li>System hashes the uploaded PDF and compares against the on-chain IPFS hash — even a single-byte change causes verification failure</li>
+                </ol>
+            </div>
+
+            <div class="modal-section">
+                <h3><i class="fas fa-flask"></i> Design Rationale</h3>
+                <ul class="modal-list">
+                    <li><strong>Ethereum + IPFS</strong> chosen for immutability — certificate records can never be altered or deleted once on-chain</li>
+                    <li><strong>Content-addressed storage</strong> (IPFS) means the hash itself proves document integrity — no trusted third party needed</li>
+                    <li><strong>Streamlit</strong> for rapid UI prototyping with a modern glassmorphism theme — no frontend framework learning curve</li>
+                    <li><strong>Firebase Auth</strong> provides role-based access (Institute vs Verifier) without building custom auth from scratch</li>
+                    <li><strong>Docker Compose</strong> bundles Ganache + app for reproducible one-command deployment</li>
+                </ul>
+            </div>
+
+            <div class="modal-section">
+                <h3><i class="fas fa-balance-scale"></i> Key Trade-offs</h3>
+                <div class="tradeoffs-grid">
+                    <div class="tradeoff-card tradeoff-pro">
+                        <strong>✅ Chose</strong>
+                        <p>Ethereum smart contract — tamper-proof, transparent, auditable by anyone on the network</p>
+                    </div>
+                    <div class="tradeoff-card tradeoff-con">
+                        <strong>⚖️ Trade-off</strong>
+                        <p>Gas costs on mainnet — development uses Ganache (local chain); production would need an L2 or consortium chain</p>
+                    </div>
+                    <div class="tradeoff-card tradeoff-pro">
+                        <strong>✅ Chose</strong>
+                        <p>IPFS via Pinata — decentralised storage, content-addressed, no single point of failure</p>
+                    </div>
+                    <div class="tradeoff-card tradeoff-con">
+                        <strong>⚖️ Trade-off</strong>
+                        <p>Pinata dependency — if Pinata goes offline, pinned content persists on IPFS but re-pinning needs another provider</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer-links">
+                <a href="https://github.com/YaswanthKumarMallela01/CertChainX" target="_blank"
+                    rel="noopener" class="btn btn-outline"><i class="fab fa-github"></i> GitHub Repo</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── RECOVERAI MODAL ── -->
+    <div class="modal" id="recoverModal" role="dialog" aria-modal="true" aria-labelledby="recoverModalTitle">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeActiveModal()" aria-label="Close">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon"><i class="fas fa-search"></i></div>
+                <div>
+                    <span class="modal-tag">Case Study · AI · Computer Vision · Freelance</span>
+                    <h2 id="recoverModalTitle">RecoverAI — Intelligent Lost &amp; Found Platform</h2>
+                </div>
+            </div>
+
+            <div class="modal-outcomes">
+                <div class="outcome"><span class="outcome-val">40:60</span><span class="outcome-lbl">Text : Image Score</span></div>
+                <div class="outcome"><span class="outcome-val">ResNet50</span><span class="outcome-lbl">Vision Model</span></div>
+                <div class="outcome"><span class="outcome-val">RBAC</span><span class="outcome-lbl">Access Control</span></div>
+            </div>
+
+            <div class="modal-section">
+                <h3><i class="fas fa-exchange-alt"></i> Data Flow</h3>
+                <ol class="modal-steps">
+                    <li>User registers with role-based access (User / Staff / Admin) — passwords hashed via Werkzeug</li>
+                    <li>Reporter submits a lost or found item with description, category, and optional image upload</li>
+                    <li>On "Find Matches", the system encodes the description using <code>all-MiniLM-L6-v2</code> Sentence-Transformer</li>
+                    <li>Images are processed through <code>ResNet50</code> (classification head removed) to extract 2048-dim feature vectors</li>
+                    <li>Hybrid score computed: 40% text cosine similarity + 60% image cosine similarity (text-only when no image)</li>
+                    <li>Matches above a 40% threshold are ranked and displayed — user can claim a match</li>
+                    <li>Admin reviews claims with justification, approves or rejects — status flows through Open → Matched → Claimed → Resolved</li>
+                </ol>
+            </div>
+
+            <div class="modal-section">
+                <h3><i class="fas fa-flask"></i> Model Choice Rationale</h3>
+                <ul class="modal-list">
+                    <li><strong>Sentence-Transformers (all-MiniLM-L6-v2)</strong> captures semantic meaning — "blue backpack" matches "navy rucksack" unlike keyword search</li>
+                    <li><strong>ResNet50</strong> provides robust visual feature extraction — pre-trained on ImageNet, no custom training required</li>
+                    <li><strong>Hybrid 40:60 weighting</strong> prioritises visual evidence since lost item descriptions are often vague, but images are distinctive</li>
+                    <li><strong>Flask Blueprints</strong> architecture keeps routes modular — auth, items, claims, admin, analytics each have their own blueprint</li>
+                    <li><strong>Chart.js 4</strong> provides interactive analytics — category distribution, 7-day activity timeline, resolution rates</li>
+                </ul>
+            </div>
+
+            <div class="modal-section">
+                <h3><i class="fas fa-balance-scale"></i> Key Trade-offs</h3>
+                <div class="tradeoffs-grid">
+                    <div class="tradeoff-card tradeoff-pro">
+                        <strong>✅ Chose</strong>
+                        <p>Pre-trained models (ResNet50 + MiniLM) — zero training cost, works out of the box on first run</p>
+                    </div>
+                    <div class="tradeoff-card tradeoff-con">
+                        <strong>⚖️ Trade-off</strong>
+                        <p>~200MB model download on first launch — acceptable for server but heavy for edge deployment</p>
+                    </div>
+                    <div class="tradeoff-card tradeoff-pro">
+                        <strong>✅ Chose</strong>
+                        <p>SQLite via SQLAlchemy — zero config, portable, perfect for demo; swappable to Postgres for production</p>
+                    </div>
+                    <div class="tradeoff-card tradeoff-con">
+                        <strong>⚖️ Trade-off</strong>
+                        <p>No real-time push notifications — in-app bell with polling; WebSocket upgrade planned for scale</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer-links">
+                <a href="https://github.com/YaswanthKumarMallela01/RecoverAI" target="_blank"
+                    rel="noopener" class="btn btn-outline"><i class="fab fa-github"></i> GitHub Repo</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── SOCIALPULSE AI MODAL ── -->
+    <div class="modal" id="socialModal" role="dialog" aria-modal="true" aria-labelledby="socialModalTitle">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeActiveModal()" aria-label="Close">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon"
+                    style="background:rgba(232,67,147,0.12);border-color:rgba(232,67,147,0.3);color:var(--accent-2)"><i
+                        class="fas fa-chart-line"></i></div>
+                <div>
+                    <span class="modal-tag">Case Study · ML · NLP · Freelance</span>
+                    <h2 id="socialModalTitle">SocialPulse AI — Sentiment Analytics Dashboard</h2>
+                </div>
+            </div>
+
+            <div class="modal-outcomes">
+                <div class="outcome"><span class="outcome-val">TF-IDF</span><span class="outcome-lbl">Feature Extraction</span></div>
+                <div class="outcome"><span class="outcome-val">REST</span><span class="outcome-lbl">API Endpoint</span></div>
+                <div class="outcome"><span class="outcome-val">Batch</span><span class="outcome-lbl">CSV Analysis</span></div>
+            </div>
+
+            <div class="modal-section">
+                <h3><i class="fas fa-exchange-alt"></i> Data Flow</h3>
+                <ol class="modal-steps">
+                    <li>Model is pre-trained via <code>train_model.py</code> — loads dataset, preprocesses text with NLTK (tokenisation, stopword removal, lemmatisation)</li>
+                    <li>TF-IDF vectoriser converts text into numerical features; multiple classifiers are trained and compared</li>
+                    <li>User enters text on the dashboard → Flask endpoint runs <code>preprocess.py</code> pipeline on input</li>
+                    <li>TF-IDF transforms the input; best-performing classifier predicts sentiment + confidence score</li>
+                    <li>For batch mode, user uploads a CSV → system analyses each row and returns downloadable results</li>
+                    <li>Model metrics page shows classifier comparison charts, confusion matrix, and classification report</li>
+                    <li>REST API (<code>POST /api/predict</code>) accepts JSON payload and returns structured prediction response</li>
+                </ol>
+            </div>
+
+            <div class="modal-section">
+                <h3><i class="fas fa-flask"></i> Design Rationale</h3>
+                <ul class="modal-list">
+                    <li><strong>TF-IDF + classic classifiers</strong> chosen over deep learning — faster training, lower resource usage, sufficient for sentiment classification</li>
+                    <li><strong>NLTK preprocessing</strong> pipeline (tokenise → stopwords → lemmatise) improves signal-to-noise ratio in text features</li>
+                    <li><strong>Multiple classifier comparison</strong> lets the user see which algorithm performs best on their data — transparency over black-box</li>
+                    <li><strong>Chart.js dashboard</strong> provides interactive visualisations without requiring a frontend framework</li>
+                    <li><strong>REST API endpoint</strong> enables integration with external tools, mobile apps, or automated pipelines</li>
+                </ul>
+            </div>
+
+            <div class="modal-section">
+                <h3><i class="fas fa-balance-scale"></i> Key Trade-offs</h3>
+                <div class="tradeoffs-grid">
+                    <div class="tradeoff-card tradeoff-pro">
+                        <strong>✅ Chose</strong>
+                        <p>TF-IDF + classic ML — trains in seconds, interpretable feature weights, no GPU requirement</p>
+                    </div>
+                    <div class="tradeoff-card tradeoff-con">
+                        <strong>⚖️ Trade-off</strong>
+                        <p>VS BERT/Transformers — deep models would capture context better but require significant compute for training and inference</p>
+                    </div>
+                    <div class="tradeoff-card tradeoff-pro">
+                        <strong>✅ Chose</strong>
+                        <p>Batch CSV analysis — handles bulk workloads server-side, returns downloadable results</p>
+                    </div>
+                    <div class="tradeoff-card tradeoff-con">
+                        <strong>⚖️ Trade-off</strong>
+                        <p>No streaming / real-time social media ingestion — would require API keys and rate-limit handling for production</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer-links">
+                <a href="https://github.com/YaswanthKumarMallela01/SocialPulse-AI" target="_blank"
+                    rel="noopener" class="btn btn-outline"><i class="fab fa-github"></i> GitHub Repo</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── NOVACHAT MODAL ── -->
+    <div class="modal" id="novaModal" role="dialog" aria-modal="true" aria-labelledby="novaModalTitle">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeActiveModal()" aria-label="Close">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon"
+                    style="background:rgba(34,197,94,0.12);border-color:rgba(34,197,94,0.3);color:#22c55e"><i
+                        class="fas fa-comments"></i></div>
+                <div>
+                    <span class="modal-tag">Case Study · Web App · Real-Time · Freelance</span>
+                    <h2 id="novaModalTitle">NovaChat — Anonymous 1:1 Real-Time Chat</h2>
+                </div>
+            </div>
+
+            <div class="modal-outcomes">
+                <div class="outcome"><span class="outcome-val">Real-time</span><span class="outcome-lbl">WebSocket Chat</span></div>
+                <div class="outcome"><span class="outcome-val">1:1</span><span class="outcome-lbl">Random Match</span></div>
+                <div class="outcome"><span class="outcome-val">Render</span><span class="outcome-lbl">Deploy-Ready</span></div>
+            </div>
+
+            <div class="modal-section">
+                <h3><i class="fas fa-exchange-alt"></i> Data Flow</h3>
+                <ol class="modal-steps">
+                    <li>User registers with email/password — passwords hashed via Werkzeug, sessions managed by Flask-Login</li>
+                    <li>User clicks "Find Match" → added to a server-side matching queue</li>
+                    <li>When two users are queued, server creates a private room and emits a <code>matched</code> Socket.IO event to both</li>
+                    <li>Messages are sent via WebSocket events — server relays to the room, stores in database for history</li>
+                    <li>Typing indicators fire on <code>keypress</code> events, debounced to avoid spam — peer sees "typing..." in real time</li>
+                    <li>Either user can delete their own messages, clear room history, or leave and re-enter the match queue</li>
+                    <li>Presence tracking shows online user count and session duration via periodic heartbeat events</li>
+                </ol>
+            </div>
+
+            <div class="modal-section">
+                <h3><i class="fas fa-flask"></i> Design Rationale</h3>
+                <ul class="modal-list">
+                    <li><strong>Flask-SocketIO</strong> provides WebSocket support with automatic fallback to long-polling — no separate WebSocket server needed</li>
+                    <li><strong>SQLAlchemy ORM</strong> with SQLite locally and PostgreSQL on Render — single codebase, zero config change for deployment</li>
+                    <li><strong>Server-side matching queue</strong> ensures true randomness and prevents self-matching — simple but effective algorithm</li>
+                    <li><strong>Gevent worker</strong> via Gunicorn handles concurrent WebSocket connections efficiently on a single Render dyno</li>
+                    <li><strong>Session-cookie auth</strong> over JWT — simpler for a server-rendered app, no token refresh complexity</li>
+                </ul>
+            </div>
+
+            <div class="modal-section">
+                <h3><i class="fas fa-balance-scale"></i> Key Trade-offs</h3>
+                <div class="tradeoffs-grid">
+                    <div class="tradeoff-card tradeoff-pro">
+                        <strong>✅ Chose</strong>
+                        <p>Flask-SocketIO — unified framework for HTTP + WebSocket, single deployment unit</p>
+                    </div>
+                    <div class="tradeoff-card tradeoff-con">
+                        <strong>⚖️ Trade-off</strong>
+                        <p>VS Node.js/Socket.IO — Node would handle more concurrent connections, but Flask kept the stack consistent</p>
+                    </div>
+                    <div class="tradeoff-card tradeoff-pro">
+                        <strong>✅ Chose</strong>
+                        <p>Single-worker gevent — sufficient for demo scale, avoids Redis pub/sub complexity</p>
+                    </div>
+                    <div class="tradeoff-card tradeoff-con">
+                        <strong>⚖️ Trade-off</strong>
+                        <p>No content moderation — reporting/blocking not yet implemented; required for any public deployment</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer-links">
+                <a href="https://github.com/YaswanthKumarMallela01/NovaChat" target="_blank"
+                    rel="noopener" class="btn btn-outline"><i class="fab fa-github"></i> GitHub Repo</a>
             </div>
         </div>
     </div>

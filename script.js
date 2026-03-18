@@ -289,3 +289,43 @@ document.addEventListener('keydown', e => {
 window.openModal = openModal;
 window.closeActiveModal = closeActiveModal;
 
+// ─── PROJECT FILTER TABS ────────────────────────
+const filterBtns = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card[data-category]');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Update active button
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const filter = btn.dataset.filter;
+
+    projectCards.forEach(card => {
+      const matches = filter === 'all' || card.dataset.category === filter;
+      if (matches) {
+        card.classList.remove('filter-hidden');
+        card.classList.add('filter-visible');
+        card.style.position = '';
+        card.style.visibility = '';
+      } else {
+        card.classList.remove('filter-visible');
+        card.classList.add('filter-hidden');
+        // Delay position:absolute to let the fade-out happen first
+        setTimeout(() => {
+          if (card.classList.contains('filter-hidden')) {
+            card.style.position = 'absolute';
+            card.style.visibility = 'hidden';
+          }
+        }, 400);
+      }
+    });
+
+    // Re-attach cursor hover effects on visible cards
+    document.querySelectorAll('.project-card:not(.filter-hidden) a, .project-card:not(.filter-hidden) button').forEach(el => {
+      el.addEventListener('mouseenter', () => ring.classList.add('hovered'));
+      el.addEventListener('mouseleave', () => ring.classList.remove('hovered'));
+    });
+  });
+});
+

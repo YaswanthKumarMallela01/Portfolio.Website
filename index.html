@@ -31,6 +31,7 @@
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -286,6 +287,34 @@
         </div>
     </section>
 
+    <!-- ========== CERTIFICATIONS ========== -->
+    <section class="certifications section" id="certifications">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Certifications</span>
+                <h2 class="section-title">Professional <span class="accent-gradient">Credentials</span></h2>
+            </div>
+            <div class="certs-grid">
+                <a href="Information/Certificates/1.pdf" target="_blank" rel="noopener" class="cert-card" data-aos="fade-up">
+                    <div class="cert-icon"><i class="fas fa-award"></i></div>
+                    <div class="cert-info">
+                        <div class="cert-name">Certificate of Excellence — I</div>
+                        <div class="cert-meta"><i class="fas fa-file-pdf"></i> PDF · Priority 1</div>
+                    </div>
+                    <span class="cert-arrow"><i class="fas fa-external-link-alt"></i></span>
+                </a>
+                <a href="Information/Certificates/2.pdf" target="_blank" rel="noopener" class="cert-card" data-aos="fade-up" data-delay="100">
+                    <div class="cert-icon"><i class="fas fa-award"></i></div>
+                    <div class="cert-info">
+                        <div class="cert-name">Certificate of Excellence — II</div>
+                        <div class="cert-meta"><i class="fas fa-file-pdf"></i> PDF · Priority 2</div>
+                    </div>
+                    <span class="cert-arrow"><i class="fas fa-external-link-alt"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- ========== PROJECTS ========== -->
     <section class="projects section" id="projects">
         <div class="container">
@@ -345,7 +374,7 @@
                 </div>
 
                 <!-- ── AI Certificate Hub ── -->
-                <div class="project-card" data-aos="fade-up" style="animation-delay:0.1s" data-category="personal">
+                <div class="project-card initially-hidden" data-aos="fade-up" style="animation-delay:0.1s" data-category="personal">
                     <div class="project-card-header">
                         <div class="project-icon"><i class="fas fa-certificate"></i></div>
                         <div class="project-badges">
@@ -388,7 +417,7 @@
                 </div>
 
                 <!-- ── LLM Code Engine ── -->
-                <div class="project-card" data-aos="fade-up" style="animation-delay:0.2s" data-category="personal">
+                <div class="project-card initially-hidden" data-aos="fade-up" style="animation-delay:0.2s" data-category="personal">
                     <div class="project-card-header">
                         <div class="project-icon"><i class="fas fa-robot"></i></div>
                         <div class="project-badges">
@@ -544,7 +573,7 @@
                 </div>
 
                 <!-- ── SocialPulse-AI (Freelance) ── -->
-                <div class="project-card featured-card" data-aos="fade-up" style="animation-delay:0.3s" data-category="freelance">
+                <div class="project-card featured-card initially-hidden" data-aos="fade-up" style="animation-delay:0.3s" data-category="freelance">
                     <div class="project-card-header">
                         <div class="project-icon" style="background:rgba(232,67,147,0.12);border-color:rgba(232,67,147,0.2);color:var(--accent-2)"><i class="fas fa-chart-line"></i></div>
                         <div class="project-badges">
@@ -581,7 +610,7 @@
                 </div>
 
                 <!-- ── NovaChat (Freelance) ── -->
-                <div class="project-card featured-card" data-aos="fade-up" style="animation-delay:0.4s" data-category="freelance">
+                <div class="project-card featured-card initially-hidden" data-aos="fade-up" style="animation-delay:0.4s" data-category="freelance">
                     <div class="project-card-header">
                         <div class="project-icon" style="background:rgba(34,197,94,0.12);border-color:rgba(34,197,94,0.2);color:#22c55e"><i class="fas fa-comments"></i></div>
                         <div class="project-badges">
@@ -616,6 +645,11 @@
                     <div class="featured-label">⭐ Freelance</div>
                 </div>
 
+            </div>
+            <div class="projects-expand-wrap">
+                <button class="btn-expand" id="expandProjects">
+                    <i class="fas fa-chevron-down"></i> View All Projects
+                </button>
             </div>
         </div>
     </section>
@@ -705,6 +739,7 @@
                     <a href="#about">About</a>
                     <a href="#skills">Skills</a>
                     <a href="#projects">Projects</a>
+                    <a href="#certifications">Certifications</a>
                     <a href="#contact">Contact</a>
                 </div>
                 <div class="footer-socials">
@@ -717,7 +752,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 Yaswanth Kumar Mallela · Crafted with <span style="color:#e84393">❤</span> · Hosted on AWS</p>
+                <p>© 2026 Yaswanth Kumar Mallela · Crafted with <span style="color:#ffd700">❤</span> · Hosted on AWS</p>
             </div>
         </div>
     </footer>
@@ -1101,6 +1136,13 @@
             </div>
 
             <div class="modal-section">
+                <h3><i class="fas fa-sitemap"></i> Architecture</h3>
+                <div class="modal-diagram">
+                    <img src="assets/certchain_arch.png" alt="CertChainX system architecture diagram" loading="lazy" />
+                </div>
+            </div>
+
+            <div class="modal-section">
                 <h3><i class="fas fa-exchange-alt"></i> Data Flow</h3>
                 <ol class="modal-steps">
                     <li>Institute logs in with pre-configured credentials stored in <code>.env</code></li>
@@ -1168,6 +1210,12 @@
                 <div class="outcome"><span class="outcome-val">40:60</span><span class="outcome-lbl">Text : Image Score</span></div>
                 <div class="outcome"><span class="outcome-val">ResNet50</span><span class="outcome-lbl">Vision Model</span></div>
                 <div class="outcome"><span class="outcome-val">RBAC</span><span class="outcome-lbl">Access Control</span></div>
+            </div>
+            <div class="modal-section">
+                <h3><i class="fas fa-sitemap"></i> Architecture</h3>
+                <div class="modal-diagram">
+                    <img src="assets/recoverai_arch.png" alt="RecoverAI system architecture diagram" loading="lazy" />
+                </div>
             </div>
 
             <div class="modal-section">
@@ -1242,6 +1290,12 @@
                 <div class="outcome"><span class="outcome-val">REST</span><span class="outcome-lbl">API Endpoint</span></div>
                 <div class="outcome"><span class="outcome-val">Batch</span><span class="outcome-lbl">CSV Analysis</span></div>
             </div>
+            <div class="modal-section">
+                <h3><i class="fas fa-sitemap"></i> Architecture</h3>
+                <div class="modal-diagram">
+                    <img src="assets/socialpulse_arch.png" alt="SocialPulse AI system architecture diagram" loading="lazy" />
+                </div>
+            </div>
 
             <div class="modal-section">
                 <h3><i class="fas fa-exchange-alt"></i> Data Flow</h3>
@@ -1314,6 +1368,12 @@
                 <div class="outcome"><span class="outcome-val">Real-time</span><span class="outcome-lbl">WebSocket Chat</span></div>
                 <div class="outcome"><span class="outcome-val">1:1</span><span class="outcome-lbl">Random Match</span></div>
                 <div class="outcome"><span class="outcome-val">Render</span><span class="outcome-lbl">Deploy-Ready</span></div>
+            </div>
+            <div class="modal-section">
+                <h3><i class="fas fa-sitemap"></i> Architecture</h3>
+                <div class="modal-diagram">
+                    <img src="assets/novachat_arch.png" alt="NovaChat system architecture diagram" loading="lazy" />
+                </div>
             </div>
 
             <div class="modal-section">

@@ -6,26 +6,50 @@
 // ─── CURSOR ─────────────────────────────────────
 const dot = document.getElementById('cursorDot');
 const ring = document.getElementById('cursorRing');
-let ringX = 0, ringY = 0;
+let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0, dotX = 0, dotY = 0;
 
 document.addEventListener('mousemove', e => {
-  dot.style.left = e.clientX + 'px';
-  dot.style.top = e.clientY + 'px';
+  mouseX = e.clientX;
+  mouseY = e.clientY;
 });
 
-function animateRing() {
-  ringX += (parseFloat(dot.style.left || 0) - ringX) * 0.12;
-  ringY += (parseFloat(dot.style.top || 0) - ringY) * 0.12;
+function animateCursor() {
+  // Spring-physics follow for dot
+  dotX += (mouseX - dotX) * 0.25;
+  dotY += (mouseY - dotY) * 0.25;
+  dot.style.left = dotX + 'px';
+  dot.style.top = dotY + 'px';
+
+  // Softer follow for ring
+  ringX += (mouseX - ringX) * 0.1;
+  ringY += (mouseY - ringY) * 0.1;
   ring.style.left = ringX + 'px';
   ring.style.top = ringY + 'px';
-  requestAnimationFrame(animateRing);
-}
-animateRing();
 
-document.querySelectorAll('a, button, .skill-pill, .project-card, .stat-card').forEach(el => {
-  el.addEventListener('mouseenter', () => ring.classList.add('hovered'));
-  el.addEventListener('mouseleave', () => ring.classList.remove('hovered'));
+  requestAnimationFrame(animateCursor);
+}
+animateCursor();
+
+// Click ripple
+document.addEventListener('mousedown', () => {
+  dot.classList.add('clicking');
+  const ripple = document.createElement('div');
+  ripple.className = 'cursor-ripple';
+  ripple.style.left = mouseX + 'px';
+  ripple.style.top = mouseY + 'px';
+  document.body.appendChild(ripple);
+  setTimeout(() => ripple.remove(), 600);
 });
+document.addEventListener('mouseup', () => dot.classList.remove('clicking'));
+
+// Hover effect on interactive elements
+function attachCursorHover(container) {
+  (container || document).querySelectorAll('a, button, .skill-pill, .project-card, .stat-card, .cert-card').forEach(el => {
+    el.addEventListener('mouseenter', () => ring.classList.add('hovered'));
+    el.addEventListener('mouseleave', () => ring.classList.remove('hovered'));
+  });
+}
+attachCursorHover();
 
 // ─── NAVBAR SCROLL ──────────────────────────────
 const navbar = document.getElementById('navbar');
@@ -126,7 +150,7 @@ class Particle {
   draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(108,99,255,${this.alpha})`;
+    ctx.fillStyle = `rgba(0,230,138,${this.alpha})`;
     ctx.fill();
   }
 }
@@ -141,7 +165,7 @@ function drawConnections() {
       const dist = Math.sqrt(dx * dx + dy * dy);
       if (dist < 120) {
         ctx.beginPath();
-        ctx.strokeStyle = `rgba(108,99,255,${0.15 * (1 - dist / 120)})`;
+        ctx.strokeStyle = `rgba(0,230,138,${0.15 * (1 - dist / 120)})`;
         ctx.lineWidth = 0.6;
         ctx.moveTo(particles[i].x, particles[i].y);
         ctx.lineTo(particles[j].x, particles[j].y);
@@ -264,12 +288,7 @@ function openModal(id) {
   backdrop.classList.add('active');
   document.body.style.overflow = 'hidden';
   modal.focus && modal.focus();
-
-  // Attach hover effects to modal buttons
-  modal.querySelectorAll('a, button').forEach(el => {
-    el.addEventListener('mouseenter', () => ring.classList.add('hovered'));
-    el.addEventListener('mouseleave', () => ring.classList.remove('hovered'));
-  });
+  attachCursorHover(modal);
 }
 
 function closeActiveModal(restoreScroll = true) {
@@ -301,6 +320,7 @@ filterBtns.forEach(btn => {
 
     const filter = btn.dataset.filter;
 
+    // When filtering, show all matching cards (override initially-hidden)
     projectCards.forEach(card => {
       const matches = filter === 'all' || card.dataset.category === filter;
       if (matches) {
@@ -308,10 +328,15 @@ filterBtns.forEach(btn => {
         card.classList.add('filter-visible');
         card.style.position = '';
         card.style.visibility = '';
+        // If it's a filtered view (not "all"), show hidden cards too
+        if (filter !== 'all') {
+          card.style.display = 'flex';
+        } else if (card.classList.contains('initially-hidden') && !card.classList.contains('show-all')) {
+          card.style.display = '';
+        }
       } else {
         card.classList.remove('filter-visible');
         card.classList.add('filter-hidden');
-        // Delay position:absolute to let the fade-out happen first
         setTimeout(() => {
           if (card.classList.contains('filter-hidden')) {
             card.style.position = 'absolute';
@@ -321,11 +346,37 @@ filterBtns.forEach(btn => {
       }
     });
 
-    // Re-attach cursor hover effects on visible cards
-    document.querySelectorAll('.project-card:not(.filter-hidden) a, .project-card:not(.filter-hidden) button').forEach(el => {
-      el.addEventListener('mouseenter', () => ring.classList.add('hovered'));
-      el.addEventListener('mouseleave', () => ring.classList.remove('hovered'));
-    });
+    // Show/hide expand button based on filter
+    const expandWrap = document.querySelector('.projects-expand-wrap');
+    if (expandWrap) {
+      expandWrap.style.display = filter === 'all' ? '' : 'none';
+    }
+
+    attachCursorHover();
   });
 });
+
+// ─── PROJECT EXPAND / COLLAPSE ──────────────────
+const expandBtn = document.getElementById('expandProjects');
+const hiddenCards = document.querySelectorAll('.project-card.initially-hidden');
+let expanded = false;
+
+if (expandBtn) {
+  expandBtn.addEventListener('click', () => {
+    expanded = !expanded;
+    hiddenCards.forEach((card, i) => {
+      if (expanded) {
+        card.classList.add('show-all');
+        card.style.animationDelay = (i * 0.1) + 's';
+      } else {
+        card.classList.remove('show-all');
+      }
+    });
+    expandBtn.classList.toggle('expanded', expanded);
+    expandBtn.innerHTML = expanded
+      ? '<i class="fas fa-chevron-up"></i> Show Less'
+      : '<i class="fas fa-chevron-down"></i> View All Projects';
+    attachCursorHover();
+  });
+}
 

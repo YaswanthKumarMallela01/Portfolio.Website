@@ -544,8 +544,8 @@ img {
 .hero-image-wrap {
   position: relative;
   flex: 0 0 auto;
-  width: 380px;
-  height: 380px;
+  width: 440px;
+  height: 440px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -566,8 +566,8 @@ img {
 
   .hero-image-wrap {
     margin: -20px auto 0;
-    width: 260px;
-    height: 260px;
+    width: 300px;
+    height: 300px;
   }
 
   .hero-cta {
@@ -580,8 +580,8 @@ img {
 }
 
 .hero-photo {
-  width: 280px;
-  height: 280px;
+  width: 340px;
+  height: 340px;
   border-radius: 50%;
   object-fit: cover;
   object-position: top;
@@ -595,8 +595,8 @@ img {
 
 @media (max-width:900px) {
   .hero-photo {
-    width: 200px;
-    height: 200px;
+    width: 240px;
+    height: 240px;
   }
 }
 
@@ -608,40 +608,40 @@ img {
 }
 
 .ring1 {
-  width: 310px;
-  height: 310px;
+  width: 370px;
+  height: 370px;
   animation-duration: 20s;
 }
 
 .ring2 {
-  width: 345px;
-  height: 345px;
+  width: 405px;
+  height: 405px;
   animation-duration: 35s;
   animation-direction: reverse;
   border-color: rgba(255, 215, 0, 0.15);
 }
 
 .ring3 {
-  width: 378px;
-  height: 378px;
+  width: 438px;
+  height: 438px;
   animation-duration: 55s;
   border-color: rgba(15, 240, 252, 0.1);
 }
 
 @media (max-width:900px) {
   .ring1 {
-    width: 220px;
-    height: 220px
+    width: 260px;
+    height: 260px
   }
 
   .ring2 {
-    width: 245px;
-    height: 245px
+    width: 285px;
+    height: 285px
   }
 
   .ring3 {
-    width: 268px;
-    height: 268px
+    width: 298px;
+    height: 298px
   }
 }
 
@@ -1716,7 +1716,6 @@ img {
   border: 1px solid var(--border-card);
   border-radius: var(--radius-sm);
   overflow: hidden;
-  max-height: 340px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1724,7 +1723,7 @@ img {
 
 .modal-diagram img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: contain;
   display: block;
 }
@@ -2028,4 +2027,195 @@ img {
 @keyframes rippleOut {
   from { width: 0; height: 0; opacity: 0.7; transform: translate(-50%,-50%); }
   to   { width: 60px; height: 60px; opacity: 0; transform: translate(-50%,-50%); }
+}
+
+/* ======================================
+   PROJECT IMAGE BANNER (slider)
+   ====================================== */
+.project-banner {
+  width: calc(100% + 56px);
+  margin: -28px -28px 0 -28px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: var(--radius) var(--radius) 0 0;
+  position: relative;
+}
+
+.project-banner-track {
+  display: flex;
+  width: 200%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover .project-banner-track {
+  transform: translateX(-50%);
+}
+
+.project-banner-track img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* ======================================
+   HOBBIES SECTION
+   ====================================== */
+.hobbies {
+  background: var(--bg-primary);
+}
+
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 28px;
+}
+
+.hobby-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.hobby-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.hobby-card:hover {
+  border-color: var(--border);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.hobby-card:hover::before { opacity: 1; }
+
+.hobby-icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: rgba(0, 230, 138, 0.1);
+  border: 1px solid rgba(0, 230, 138, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: var(--transition);
+}
+
+.hobby-card:hover .hobby-icon {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border-color: transparent;
+  box-shadow: 0 4px 16px rgba(0, 230, 138, 0.3);
+  transform: scale(1.05);
+}
+
+.hobby-info h4 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.hobby-info p {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+/* ======================================
+   DOCUMENT PREVIEW POPUP
+   ====================================== */
+.preview-trigger {
+  position: relative;
+}
+
+.preview-popup {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  width: 280px;
+  height: 360px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 230, 138, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  z-index: 100;
+  overflow: hidden;
+  padding: 8px;
+}
+
+.preview-popup::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid var(--border);
+}
+
+.preview-trigger:hover .preview-popup {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+.preview-popup iframe,
+.preview-popup embed {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: calc(var(--radius) - 4px);
+  background: #fff;
+}
+
+.preview-popup .preview-label {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+  padding: 4px 12px;
+  border-radius: 50px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* Cert card preview needs different positioning */
+.cert-card.preview-trigger .preview-popup {
+  bottom: calc(100% + 16px);
+  width: 300px;
+  height: 380px;
+}
+
+@media (max-width: 768px) {
+  .preview-popup {
+    display: none !important;
+  }
 }

@@ -44,7 +44,7 @@ document.addEventListener('mouseup', () => dot.classList.remove('clicking'));
 
 // Hover effect on interactive elements
 function attachCursorHover(container) {
-  (container || document).querySelectorAll('a, button, .skill-pill, .project-card, .stat-card, .cert-card').forEach(el => {
+  (container || document).querySelectorAll('a, button, .skill-pill, .project-card, .stat-card, .cert-card, .hobby-card, .preview-trigger').forEach(el => {
     el.addEventListener('mouseenter', () => ring.classList.add('hovered'));
     el.addEventListener('mouseleave', () => ring.classList.remove('hovered'));
   });

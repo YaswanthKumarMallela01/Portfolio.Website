@@ -30,6 +30,7 @@
                 <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#hobbies" class="nav-link">Hobbies</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#certifications" class="nav-link">Certifications</a></li>
@@ -221,6 +222,75 @@
                         <h4>Twitter / X Articles</h4>
                         <p>Twitter threads from industry engineers are gold. I follow AI researchers, open-source
                             maintainers, and tech thought leaders for bite-sized insights and deep dives.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== EDUCATION ========== -->
+    <section class="education section" id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Education</span>
+                <h2 class="section-title">Academic <span class="accent-gradient">Journey</span></h2>
+            </div>
+            <div class="education-timeline">
+                <!-- B.Tech -->
+                <div class="edu-card" data-aos="fade-up">
+                    <div class="edu-dot"></div>
+                    <div class="edu-date">
+                        <span class="edu-year">2023 — Present</span>
+                    </div>
+                    <div class="edu-content">
+                        <div class="edu-icon"><i class="fas fa-university"></i></div>
+                        <div class="edu-details">
+                            <h3>Bachelor of Technology</h3>
+                            <h4>Computer Science &amp; Engineering (Data Science)</h4>
+                            <p class="edu-institution"><i class="fas fa-map-marker-alt"></i> Lovely Professional University, Punjab, India</p>
+                            <div class="edu-score">
+                                <span class="edu-badge"><i class="fas fa-chart-line"></i> CGPA: 7.03</span>
+                                <span class="edu-status">Currently Pursuing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Intermediate -->
+                <div class="edu-card" data-aos="fade-up" data-delay="100">
+                    <div class="edu-dot"></div>
+                    <div class="edu-date">
+                        <span class="edu-year">2021 — 2023</span>
+                    </div>
+                    <div class="edu-content">
+                        <div class="edu-icon"><i class="fas fa-book-reader"></i></div>
+                        <div class="edu-details">
+                            <h3>Intermediate (12th Grade)</h3>
+                            <h4>MPC Stream</h4>
+                            <p class="edu-institution"><i class="fas fa-map-marker-alt"></i> Narayana Junior College, Vijayawada, Andhra Pradesh</p>
+                            <div class="edu-score">
+                                <span class="edu-badge"><i class="fas fa-percentage"></i> 85%</span>
+                                <span class="edu-status">Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Matriculation -->
+                <div class="edu-card" data-aos="fade-up" data-delay="200">
+                    <div class="edu-dot"></div>
+                    <div class="edu-date">
+                        <span class="edu-year">2020 — 2021</span>
+                    </div>
+                    <div class="edu-content">
+                        <div class="edu-icon"><i class="fas fa-school"></i></div>
+                        <div class="edu-details">
+                            <h3>Matriculation (10th Grade)</h3>
+                            <h4>SSC Board</h4>
+                            <p class="edu-institution"><i class="fas fa-map-marker-alt"></i> Sri Vijnana Vihara English Medium School, Vijayawada, Andhra Pradesh</p>
+                            <div class="edu-score">
+                                <span class="edu-badge"><i class="fas fa-percentage"></i> 84%</span>
+                                <span class="edu-status">Completed</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -842,14 +912,19 @@
                     </div>
                 </div>
                 <form class="contact-form" id="contactForm" data-aos="fade-left"
-                    action="mailto:yashwanthkumarmallela@gmail.com" method="post" enctype="text/plain">
+                    action="https://formsubmit.co/yashwanthkumarmallela@gmail.com" method="POST">
+                    <!-- FormSubmit configuration -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="Portfolio Contact — New Message">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="text" name="_honey" style="display:none">
                     <div class="form-group">
                         <label for="name">Your Name</label>
-                        <input type="text" id="name" name="Name" placeholder="John Doe" required />
+                        <input type="text" id="name" name="Name" placeholder="John Doe" required autocomplete="name" />
                     </div>
                     <div class="form-group">
                         <label for="email">Your Email</label>
-                        <input type="email" id="email" name="Email" placeholder="john@example.com" required />
+                        <input type="email" id="email" name="Email" placeholder="john@example.com" required autocomplete="email" />
                     </div>
                     <div class="form-group">
                         <label for="subject">Subject</label>
@@ -881,6 +956,7 @@
                     <a href="#home">Home</a>
                     <a href="#about">About</a>
                     <a href="#hobbies">Hobbies</a>
+                    <a href="#education">Education</a>
                     <a href="#skills">Skills</a>
                     <a href="#projects">Projects</a>
                     <a href="#certifications">Certifications</a>
@@ -896,7 +972,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 Yaswanth Kumar Mallela · Crafted with <span style="color:#ffd700">❤</span> · Hosted on AWS</p>
+                <p>© 2026 Yaswanth Kumar Mallela · Crafted with <span style="color:#ffd700">❤</span> · Hosted on <a href="https://github.com/YaswanthKumarMallela01" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">GitHub</a></p>
             </div>
         </div>
     </footer>

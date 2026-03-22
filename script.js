@@ -257,14 +257,10 @@ document.querySelectorAll('.skill-pill').forEach(pill => {
 // ─── CONTACT FORM ───────────────────────────────
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-  contactForm.addEventListener('submit', e => {
+  contactForm.addEventListener('submit', () => {
     const btn = document.getElementById('sendBtn');
-    btn.innerHTML = '<i class="fas fa-check"></i> Opening mail client...';
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
     btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
-    setTimeout(() => {
-      btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-      btn.style.background = '';
-    }, 3000);
   });
 }
 

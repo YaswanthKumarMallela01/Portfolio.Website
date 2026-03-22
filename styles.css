@@ -1886,7 +1886,7 @@ img {
   transition: var(--transition);
   text-decoration: none;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .cert-card::before {
@@ -2061,6 +2061,223 @@ img {
 }
 
 /* ======================================
+   EDUCATION SECTION (vertical timeline)
+   ====================================== */
+.education {
+  background: var(--bg-secondary);
+}
+
+.education-timeline {
+  position: relative;
+  padding-left: 40px;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+/* Vertical line */
+.education-timeline::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-2), var(--accent-3));
+  border-radius: 2px;
+}
+
+.edu-card {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.edu-card:last-child {
+  margin-bottom: 0;
+}
+
+/* Timeline dot */
+.edu-dot {
+  position: absolute;
+  left: -33px;
+  top: 24px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid var(--bg-secondary);
+  box-shadow: 0 0 0 3px rgba(0, 230, 138, 0.25), 0 0 12px rgba(0, 230, 138, 0.3);
+  z-index: 2;
+  transition: var(--transition);
+}
+
+.edu-card:hover .edu-dot {
+  background: var(--accent-2);
+  box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.25), 0 0 16px rgba(255, 215, 0, 0.4);
+  transform: scale(1.2);
+}
+
+.edu-date {
+  margin-bottom: 10px;
+}
+
+.edu-year {
+  display: inline-block;
+  background: rgba(0, 230, 138, 0.1);
+  border: 1px solid rgba(0, 230, 138, 0.25);
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 50px;
+  letter-spacing: 0.04em;
+}
+
+.edu-content {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.edu-content::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.edu-card:hover .edu-content {
+  border-color: var(--border);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 230, 138, 0.06);
+}
+
+.edu-card:hover .edu-content::before {
+  opacity: 1;
+}
+
+.edu-icon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(0, 230, 138, 0.1);
+  border: 1px solid rgba(0, 230, 138, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-size: 1.2rem;
+  transition: var(--transition);
+}
+
+.edu-card:hover .edu-icon {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 4px 16px rgba(0, 230, 138, 0.3);
+}
+
+.edu-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.edu-details h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.edu-details h4 {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--accent-3);
+  margin-bottom: 8px;
+}
+
+.edu-institution {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.edu-institution i {
+  color: var(--accent);
+  font-size: 0.75rem;
+}
+
+.edu-score {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.edu-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, rgba(0, 230, 138, 0.12), rgba(255, 215, 0, 0.08));
+  border: 1px solid rgba(0, 230, 138, 0.2);
+  color: var(--text-primary);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 50px;
+}
+
+.edu-badge i {
+  color: var(--accent);
+  font-size: 0.72rem;
+}
+
+.edu-status {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #22c55e;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .education-timeline {
+    padding-left: 30px;
+  }
+
+  .education-timeline::before {
+    left: 10px;
+  }
+
+  .edu-dot {
+    left: -27px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .edu-content {
+    flex-direction: column;
+    gap: 14px;
+    padding: 20px 18px;
+  }
+}
+
+/* ======================================
    HOBBIES SECTION
    ====================================== */
 .hobbies {
@@ -2210,8 +2427,9 @@ img {
 /* Cert card preview needs different positioning */
 .cert-card.preview-trigger .preview-popup {
   bottom: calc(100% + 16px);
-  width: 300px;
-  height: 380px;
+  width: 420px;
+  height: 520px;
+  z-index: 200;
 }
 
 @media (max-width: 768px) {
